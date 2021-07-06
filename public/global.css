@@ -1,0 +1,56 @@
+:root {
+    --font-size-h1: clamp(1.953rem, 8vw, 4.768rem);
+    --font-size-h2: clamp(3.052rem, 15vh, 9.313rem);
+    --font-size-h3: clamp(2.441rem, 4vw, 3.052rem);
+    --font-size-h4: clamp(1.953rem, 3vw, 2.441rem);
+    --font-size-p: clamp(1rem, 2vw ,1.25rem);
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-black-trans75: hsla(285, 5%, 17%, 0.75);
+
+    /* Greys  */
+    --color-grey-dark: #2D2A2E;
+    --color-grey-light: #403e41;
+
+    --color-primary: #78DCE8;
+    --color-primary-trans50: rgba(120, 221, 232, 0.50);
+    --color-accent: #ff6188;
+}
+
+*,
+::before,
+::after {
+    /* Gets rid of default margin and padding. */
+    margin: 0;
+    padding: 0;
+
+    /* Removes all defualt I/O stylings. */
+    appearance: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.centeredInContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contentWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
