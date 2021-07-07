@@ -2,7 +2,6 @@
     import { fly } from "svelte/transition";
 
     export let w;
-    export let h;
     export let initial;
 
 </script>
@@ -17,7 +16,7 @@
         Spencer Venable
     </h1>
 {:else}
-    <h1 in:fly={{ x: -w, duration: 300 }} id="title">Spencer Venable</h1>
+    <h1 in:fly={{ x: -w, duration: 200 }} id="title">Spencer Venable</h1>
 {/if}
 
 <style>

@@ -1,12 +1,18 @@
 <script>
-    import { fade } from "svelte/transition";
+    import { fly, fade } from "svelte/transition";
 
     // Props
     export let sectionTitle;
+    export let h;
+    export let handleOutroEnd;
 </script>
 
-<section in:fade>
-    <h2 in:fade>{sectionTitle}</h2>
+<section 
+    in:fly="{{y: h, duration: 200}}" 
+    out:fly="{{y: h, duration: 200}}"
+    on:outroend="{handleOutroEnd}"
+>
+    <h2>{sectionTitle}</h2>
     <slot></slot>
 </section>
 

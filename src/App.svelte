@@ -3,12 +3,17 @@
 
     // Components 
     import Title from "./components/Title.svelte";
-    import About from "./components/About.svelte";
-    import Socials from "./components/Socials.svelte";
     import Nav from "./components/Navigation/Nav.svelte";
+    import Socials from "./components/Socials.svelte";
+    
+    import About from "./components/About.svelte";
+    import Projects from "./components/Projects/Projects.svelte";
+    import Testamonials from "./components/Testamonials/Testamonials.svelte";
 
     let w;
     let h;
+
+    $: outroComplete = false;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
     let currentSection = "0"
@@ -22,24 +27,35 @@
             initial = false;
             clearInterval(interval);
         }, 1000);
+        outroComplete = true;
     });
+
+
+    // Handlers for syncronus transitions between components.
+    const handleOutroEnd = () => {
+        outroComplete = true;
+    }
+
+    const handleOutroStart = () => {
+        outroComplete = false;
+    }
 
 </script>
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
-    <Nav {w} loaded={initial} bind:currentSection />
+    <Nav {w} loaded={initial} bind:currentSection {handleOutroStart}/>
     
     <header>
-        <Title {initial} {w} {h} />
-        <Socials />
+        <Title {initial} {w} />
+        <Socials {initial} {w} />
     </header>
 
-    {#if currentSection == 0}
-        <About loaded={initial} {w} {h} />
-    {:else if currentSection == 1}
-        <p>temp</p>
-    {:else if currentSection == 2}
-        <p>temp</p>
+    {#if currentSection == 0 && outroComplete}
+        <About loaded={initial} {h} {handleOutroEnd} />
+    {:else if currentSection == 1 && outroComplete}
+        <Projects loaded={initial} {h} {handleOutroEnd} />
+    {:else if currentSection == 2 && outroComplete}
+        <Testamonials loaded={initial} {h} {handleOutroEnd} />
     {/if}
 </main>
 

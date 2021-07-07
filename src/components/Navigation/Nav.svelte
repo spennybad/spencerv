@@ -3,6 +3,7 @@
 
     export let currentSection;
     export let loaded;
+    export let handleOutroStart;
 
     export let w;
 
@@ -15,13 +16,12 @@
 {#if !loaded}
     <nav>
         <ul>
-            <NavButton {w} selection={0} {setCurrentSection}>About</NavButton>
-            <NavButton {w} selection={1} {setCurrentSection}>Projects</NavButton>
-            <NavButton {w} selection={2} {setCurrentSection}>Testimonials</NavButton>
+            <NavButton {w} selection={0} {setCurrentSection} {handleOutroStart}>About</NavButton>
+            <NavButton {w} selection={1} {setCurrentSection} {handleOutroStart}>Projects</NavButton>
+            <NavButton {w} selection={2} {setCurrentSection} {handleOutroStart}>Testimony</NavButton>
         </ul>
     </nav>
 {/if}
-
 
 <style>
 

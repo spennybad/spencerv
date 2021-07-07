@@ -1,14 +1,25 @@
 <script>
 
     import { fly } from "svelte/transition";
+    
     export let setCurrentSection;
     export let selection;
+    export let handleOutroStart;
+
     export let w;
+
 
 </script>
 
-<li in:fly="{{x: w, duration: 200, delay: selection * 200}}">
-    <button on:click={() => setCurrentSection(selection)}><slot /></button>
+<li in:fly="{{x: w, duration: 200, delay: selection * 100}}">
+    <button 
+        on:click={() => {
+                setCurrentSection(selection);
+                handleOutroStart();
+            }}
+        >
+            <slot />
+    </button>
 </li>
 
 <style>
@@ -18,6 +29,7 @@
         background-color: var(--color-primary);
         padding: 1rem;
         font-size: var(--font-size-p);
+        font-weight: 600;
         transition: all .2s;
         cursor: pointer;
         transition: all .2s;

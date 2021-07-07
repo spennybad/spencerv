@@ -1,19 +1,25 @@
 <script>
-    import { fade } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
+
+    export let initial;
+    export let w; 
+
 </script>
 
-<ul class="socials" transition:fade={{duration: 200}}>
-    <li>
-        <a href="https://www.linkedin.com/in/spencer-venable-31494a187">
-            <img class="centeredInContainer" src="/images/linkedin.svg" alt="LinkedIn">
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/Spencercv7/aim-trainer">
-            <img class="centeredInContainer" src="/images/github.svg" alt="GitHub">
-        </a>
-    </li>
-</ul>
+{#if !initial}
+    <ul class="socials" transition:fly={{x: w, duration: 200}}>
+        <li>
+            <a href="https://www.linkedin.com/in/spencer-venable-31494a187">
+                <img class="centeredInContainer" src="/images/linkedin.svg" alt="LinkedIn">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Spencercv7/aim-trainer">
+                <img class="centeredInContainer" src="/images/github.svg" alt="GitHub">
+            </a>
+        </li>
+    </ul>
+{/if}
 
 <style>
     .socials {

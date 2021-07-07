@@ -1,14 +1,16 @@
 <script>
 
     import Section from './Section.svelte';
+
     export let loaded;
-    export let w;
+    export let handleOutroEnd;
+    
     export let h;
 
 </script>
 
 {#if !loaded}
-    <Section {w} {h} sectionTitle="About Me">
+    <Section {h} {handleOutroEnd} sectionTitle="About Me">
         <div id="about_wrapper">
             <div id="photo">
                 <img src="/images/channel-icon.jpeg" alt="French Boy"/>
