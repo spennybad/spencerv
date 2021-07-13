@@ -29,7 +29,9 @@
     #about_wrapper {
         display: grid;
         grid-template-rows: min-content auto;
+        grid-template-columns: 40%;
         grid-gap: 2rem;
+        justify-content: center;
     }
 
     #about_text > :not(:last-child) {
@@ -64,6 +66,25 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+    @media only screen and (max-width: 1499px) {
+        #about_wrapper {
+            grid-template-columns: 50%;
+        }
+    }
+
+    
+    @media only screen and (max-width: 1100px) {
+        #about_wrapper {
+            grid-template-columns: 60%;
+        }
+    }
+    
+    @media only screen and (max-width: 800px) {
+        #about_wrapper {
+            grid-template-columns: 80%;
+        }
     }
 
 </style>

@@ -8,7 +8,7 @@
     export let w;
 
     const setCurrentSection = (selection) => {
-        currentSection = selection
+        if (selection != currentSection) currentSection = selection;
     }
 
 </script>
@@ -16,9 +16,9 @@
 {#if !loaded}
     <nav>
         <ul>
-            <NavButton {w} selection={0} {setCurrentSection} {handleOutroStart}>About</NavButton>
-            <NavButton {w} selection={1} {setCurrentSection} {handleOutroStart}>Projects</NavButton>
-            <NavButton {w} selection={2} {setCurrentSection} {handleOutroStart}>Testimony</NavButton>
+            <NavButton {w} {currentSection} selection={0} {setCurrentSection} {handleOutroStart}>About</NavButton>
+            <NavButton {w} {currentSection} selection={1} {setCurrentSection} {handleOutroStart}>Projects</NavButton>
+            <NavButton {w} {currentSection} selection={2} {setCurrentSection} {handleOutroStart}>Testimony</NavButton>
         </ul>
     </nav>
 {/if}

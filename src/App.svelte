@@ -16,7 +16,7 @@
     $: outroComplete = false;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
-    let currentSection = "0"
+    let currentSection = 1;
 
     $: initial = false;
 
@@ -61,21 +61,21 @@
 
 <style>
 
-    header {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-    }
-
     main {
         position: relative;
         width: 100%;
         height: 100%;
         align-content: center;
         background-color: var(--color-grey-dark);
-        overflow: hidden;
 
         display: grid;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 10% 90%;
     }
+
+    header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
 </style>

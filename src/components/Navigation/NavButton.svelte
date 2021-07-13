@@ -5,6 +5,7 @@
     export let setCurrentSection;
     export let selection;
     export let handleOutroStart;
+    export let currentSection;
 
     export let w;
 
@@ -14,8 +15,10 @@
 <li in:fly="{{x: w, duration: 200, delay: selection * 100}}">
     <button 
         on:click={() => {
-                setCurrentSection(selection);
-                handleOutroStart();
+                if (selection != currentSection) {
+                    setCurrentSection(selection);
+                    handleOutroStart(selection);
+                }
             }}
         >
             <slot />
