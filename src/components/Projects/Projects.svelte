@@ -22,5 +22,4 @@
 {/if}
 
 <style>
-
 </style>

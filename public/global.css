@@ -69,7 +69,7 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--color-grey-light); 
+    background: var(--color-grey-dark); 
 }
 
 /* Handle */
