@@ -2,14 +2,14 @@
 
     import Section from '../Section.svelte';
 
-    export let loaded;
+    export let loading;
     export let handleOutroEnd;
     
     export let h;
 
 </script>
 
-{#if !loaded}
+{#if !loading}
     <Section {h} {handleOutroEnd} sectionTitle="Testimony">
 
     </Section>

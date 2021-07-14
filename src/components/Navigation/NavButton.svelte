@@ -4,21 +4,14 @@
     
     export let setCurrentSection;
     export let selection;
-    export let handleOutroStart;
-    export let currentSection;
-
     export let w;
-
 
 </script>
 
 <li in:fly="{{x: w, duration: 200, delay: selection * 100}}">
     <button 
         on:click={() => {
-                if (selection != currentSection) {
-                    setCurrentSection(selection);
-                    handleOutroStart(selection);
-                }
+                setCurrentSection(selection);
             }}
         >
             <slot />
@@ -46,6 +39,25 @@
 
     li:not(:last-child) {
         margin-bottom: .5rem;
+    }
+
+    /* REMOVES MARGIN AND PADDING FOR MOBILE NAVIGATION */
+    @media only screen and (max-width: 650px) {
+        button {
+            padding-right: 1rem;
+            margin-right: 0rem;
+            font-size: var(--font-size-h4);
+            color: var(--color-primary);
+            background-color: var(--color-grey-light);
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        
+        button:hover {
+            transform: translateX(-.5rem);
+        }
     }
 
 

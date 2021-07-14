@@ -1,23 +1,25 @@
 [
     
     {
-        "url": "www.mannyhouston.com",
+        "url": "https://www.mannyhouston.com/",
         "desc": "Art portfolio and blog for rapper/actor Manny Houston.",
         "imagePath": "/images/project-images/mannyhouston.png",
-        "priority": true
+        "priority": true,
+        "git": "https://github.com/Spencercv7/mannyhouston_web"
     }
     ,
     {
         "url": "https://epoch-converter.vercel.app/",
         "desc": "Unix timestamp converter application.",
         "imagePath": "/images/project-images/epochconverter.png",
-        "priority": false
+        "priority": false,
+        "git": "https://github.com/Spencercv7/epoch-converter"
     },
     {
         "url": "https://aim-trainer.vercel.app/",
         "desc": "Aim traning application for mouse accuracy.",
         "imagePath": "/images/project-images/aimtrainner.png",
-        "priority": false
-   
+        "priority": false,
+        "git": "https://github.com/Spencercv7/aim-trainer"   
     }
 ]

@@ -5,7 +5,8 @@
     import Title from "./components/Title.svelte";
     import Nav from "./components/Navigation/Nav.svelte";
     import Socials from "./components/Socials.svelte";
-    
+    import NavToggleButton from "./components/Navigation/NavToggleButton.svelte";
+
     import About from "./components/About.svelte";
     import Projects from "./components/Projects/Projects.svelte";
     import Testamonials from "./components/Testamonials/Testamonials.svelte";
@@ -14,6 +15,7 @@
     let h;
 
     $: outroComplete = false;
+    $: navPanel = false;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
     let currentSection = 1;
@@ -40,22 +42,31 @@
         outroComplete = false;
     }
 
+    const handleNav = (setto) => {
+        if (setto == undefined) {
+            navPanel = !navPanel;
+        } else {
+            navPanel = setto;
+        }
+    }
+
 </script>
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
-    <Nav {w} loaded={initial} bind:currentSection {handleOutroStart}/>
-    
+    <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
+
     <header>
         <Title {initial} {w} />
-        <Socials {initial} {w} />
+        <NavToggleButton loading={initial} {handleNav}/>
+        <!-- <Socials {initial} {w} /> -->
     </header>
 
     {#if currentSection == 0 && outroComplete}
-        <About loaded={initial} {h} {handleOutroEnd} />
+        <About loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 1 && outroComplete}
-        <Projects loaded={initial} {h} {handleOutroEnd} />
+        <Projects loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 2 && outroComplete}
-        <Testamonials loaded={initial} {h} {handleOutroEnd} />
+        <Testamonials loading={initial} {h} {handleOutroEnd} />
     {/if}
 </main>
 
@@ -70,6 +81,8 @@
 
         display: grid;
         grid-template-rows: 10% 90%;
+
+        overflow: hidden;
     }
 
     header {
