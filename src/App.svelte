@@ -18,7 +18,7 @@
     $: navPanel = false;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
-    let currentSection = 1;
+    let currentSection = 0;
 
     $: initial = false;
 
@@ -57,8 +57,10 @@
 
     <header>
         <Title {initial} {w} />
-        <NavToggleButton loading={initial} {handleNav}/>
-        <!-- <Socials {initial} {w} /> -->
+        <div id="navAndSocials">
+            <NavToggleButton loading={initial} {handleNav}/>
+            <Socials {initial} {w} />
+        </div>
     </header>
 
     {#if currentSection == 0 && outroComplete}
@@ -89,6 +91,11 @@
         display: flex;
         align-items: center;
         padding: 1rem;
+    }
+
+    #navAndSocials {
+        position: relative;
+        margin-left: auto;
     }
 
 </style>

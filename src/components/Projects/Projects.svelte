@@ -15,7 +15,7 @@
         {h} 
         {handleOutroEnd} 
         sectionTitle="Projects" 
-        styling="padding: 0rem 6rem 0rem 6rem;"
+        styling="projects"
     >
         <ProjectList />
     </Section>

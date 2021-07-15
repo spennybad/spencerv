@@ -10,7 +10,7 @@
 </script>
 
 {#if !loading}
-    <Section {h} {handleOutroEnd} sectionTitle="About Me">
+    <Section {h} {handleOutroEnd} sectionTitle="About Me" styling="about">
         <div id="about_wrapper">
             <div id="photo">
                 <img src="/images/channel-icon.jpeg" alt="French Boy"/>
@@ -42,13 +42,12 @@
     p {
         color: var(--color-white);
         font-size: var(--font-size-p);
-        background-color: var(--color-black-trans75);
         text-align: center;
     }
 
     p span {
         color: var(--color-primary);
-        font-size: calc(var(--font-size-p) + 1rem);
+        font-size: calc(var(--font-size-p) + .5rem);
     }
 
     #photo {
@@ -73,7 +72,6 @@
             grid-template-columns: 50%;
         }
     }
-
     
     @media only screen and (max-width: 1100px) {
         #about_wrapper {
@@ -84,6 +82,20 @@
     @media only screen and (max-width: 800px) {
         #about_wrapper {
             grid-template-columns: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #photo {
+            height: 13rem;
+            width: 13rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #photo {
+            height: 11rem;
+            width: 11rem;
         }
     }
 

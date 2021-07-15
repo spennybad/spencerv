@@ -45,15 +45,17 @@
         height: 50%;
         width: 50%;
     }
-    @media only screen and (max-width: 600px) {
-        li {
-            height: 3rem;
-            width: 3rem;
-        }
-    }
-    @media only screen and (max-width: 400px) {
-        .socials {
+
+    @media only screen and (max-width: 650px) {
+        ul {
+            position: absolute;
+            bottom: 1;
+            right: 50%;
+            transform: translateX(50%);
             flex-direction: column;
+            justify-items: center;
+            margin-top: 1rem;
         }
     }
+    
 </style>

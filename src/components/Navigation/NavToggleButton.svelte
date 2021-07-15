@@ -16,11 +16,12 @@
 <style>
 
     button {
+        position: relative;
+
         appearance: none;
         border: none;
-        margin-left: auto;
 
-        width: 3rem;
+        width: 2.5rem;
 
         display: grid;
         grid-template-rows: repeat(3, max-content);;
@@ -30,7 +31,7 @@
         background: none;
         visibility: hidden;
 
-        z-index: 10;
+        z-index: 2;
 
         cursor: pointer;
     }

@@ -1,14 +1,15 @@
 :root {
-    --font-size-h1: clamp(1.953rem, 8vw, 4.768rem);
-    --font-size-h2: clamp(3.052rem, 15vh, 7.451rem);
+    --font-size-h1: clamp(1.5rem, 6vw, 3.052rem);
+    --font-size-h2: clamp(3.052rem, 10vh, 7.451rem);
     --font-size-h3: clamp(2.441rem, 4vw, 3.052rem);
     --font-size-h4: clamp(1.953rem, 3vw, 2.441rem);
-    --font-size-p: clamp(1rem, 2vw ,1.25rem);
+    --font-size-p: clamp(.9rem, 2vw ,1.25rem);
 
     --color-white: #fff;
     --color-black: #000;
 
     --color-black-trans75: hsla(285, 5%, 17%, 0.75);
+    --color-black-trans90: hsla(285, 5%, 17%, 0.90);
 
     /* Greys  */
     --color-grey-dark: #2D2A2E;

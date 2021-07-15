@@ -1,5 +1,6 @@
 <script>
     import NavButton from './NavButton.svelte';
+    import { fly } from 'svelte/transition';
 
     export let currentSection;
     export let loading;
@@ -25,7 +26,7 @@
 
 {#if !loading}
     {#if navPanel}
-        <nav id="mobile_nav">
+        <nav id="mobile_nav" transition:fly="{{x: w, duration: 100}}">
             <ul>
                 <NavButton {w} {currentSection} selection={0} {setCurrentSection} >About</NavButton>
                 <NavButton {w} {currentSection} selection={1} {setCurrentSection} >Projects</NavButton>
@@ -65,7 +66,7 @@
         right: 0;
         height: 100%;
         width: 100%;
-        background-color: var(--color-black-trans75);
+        background-color: var(--color-black-trans90);
         display: grid;
         place-items: center;
         z-index: 1;

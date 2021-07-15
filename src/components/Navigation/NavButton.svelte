@@ -8,7 +8,10 @@
 
 </script>
 
-<li in:fly="{{x: w, duration: 200, delay: selection * 100}}">
+<li 
+    in:fly="{{x: w, duration: 200, delay: selection * 100}}"
+    out:fly="{{x: w, duration: 200, delay: selection * 100}}"
+>
     <button 
         on:click={() => {
                 setCurrentSection(selection);

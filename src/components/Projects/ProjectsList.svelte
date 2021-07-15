@@ -3,7 +3,6 @@
     import * as projectsData from '../../data/projects.json';
     import ProjectTile from './ProjectTile.svelte';
     let projectListW;
-    let projectListH;
 
     let gridGap = 1;
 
@@ -29,17 +28,17 @@
 
 </script>
 
-<ul bind:clientWidth={projectListW} bind:clientHeight={projectListH}
+<ul bind:clientWidth={projectListW}
     style="
         grid-template-columns: repeat({projectXCount}, 1fr);
         grid-gap: {gridGap}rem;
         padding: calc({gridGap}rem + 1rem);
     "
 >
-    <p><span>*</span> denotes key project.</p>
+    <p><span>*</span>  denotes key project.</p>
     {#each projectsData.default as project}
 
-        <ProjectTile {project} {projectListW} {projectListH} {projectXCount} {gridGap} />
+        <ProjectTile {project} {projectListW} {projectXCount} {gridGap} />
 
     {/each}
 
@@ -49,7 +48,7 @@
 
     ul {
         height: 100%;
-        width: 90%;
+        width: 100%;
 
         position: relative;
         
@@ -59,6 +58,7 @@
         grid-auto-rows: max-content;
         list-style: none;
         overflow-y: scroll;
+        
     }
 
     p {
@@ -67,13 +67,17 @@
         right: 0;
         color: var(--color-white);
         display: flex;
+        font-size: var(--font-size-p);
     }
 
     p span {
-        font-size: var(--font-size-h4);
         color: var(--color-accent);
-        line-height: 1;
-        margin-right: .5rem;
     }
-    
+
+    @media only screen and (max-width: 650px) {
+        ul {
+            width: 90%;
+        }
+    }
+
 </style>

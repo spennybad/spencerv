@@ -1,6 +1,5 @@
 <script>
     export let project;
-    export let projectListH;
     export let projectListW;
 
     export let projectXCount;

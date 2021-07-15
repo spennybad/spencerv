@@ -8,7 +8,6 @@
 
 {#if initial}
     <h1
-        id="title_initial"
         class="centeredInContainer"
         in:fly={{ x: -w, duration: 400 }}
         out:fly={{ x: w, duration: 400 }}
@@ -16,17 +15,14 @@
         Spencer Venable
     </h1>
 {:else}
-    <h1 in:fly={{ x: -w, duration: 200 }} id="title">Spencer Venable</h1>
+    <h1 in:fly={{ x: -w, duration: 200 }}>Spencer Venable</h1>
 {/if}
 
 <style>
-    #title_initial {
-        color: var(--color-white);
-        font-size: var(--font-size-h1);
-        white-space: nowrap;
-    }
 
-    #title {
+    h1 {
+        font-size: var(--font-size-h1);
         color: var(--color-white);
+        white-space: nowrap;
     }
 </style>
