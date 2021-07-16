@@ -12,13 +12,15 @@
     "
     class:priority={project.priority}
 >  
-    <div style="background-image: url({project.imagePath})" />
+    <img class="background_image" src={project.imagePath} alt="Project." />
     <div class="projectHoverPanel">
         <a href={project.url}>
             <img src="/images/earth.svg" alt="Internet."/>
+            <p>Visit Site</p>
         </a>
         <a href={project.git}>
             <img src="/images/github1.svg" alt="Github."/>
+            <p>Visit Repo</p>
         </a>
     </div>
 </li>
@@ -49,17 +51,11 @@
     }
 
 
-    div {
+    .background_image {
         height: 100%;
         width: 100%;
 
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        background-size: cover;
-        background-position: center;
-        transition: all .2s;
+        object-fit: cover;
     }
 
     li:hover {
@@ -91,20 +87,29 @@
     }
 
     .projectHoverPanel a {
-        position: relative;
-        height: 100%;
-        width: 100%;
-
         display: grid;
         place-items: center;
         
         transition: all .2s;
     }
 
+    a { 
+        text-decoration: none;
+        appearance: none;
+    }
+
+    .projectHoverPanel a p {
+        margin-top: .5rem;
+        background-color: var(--color-grey-dark);
+        color: var(--color-primary);
+        padding: .25rem;
+        border: none;
+    }
+
     .projectHoverPanel a img {
         filter: invert();
-        height: 30%;
-        width: 30%;
+        height: 100%;
+        width: 100%;
     }
 
     .projectHoverPanel a:hover {

@@ -21,6 +21,8 @@
         appearance: none;
         border: none;
 
+        margin-left: auto;
+
         width: 2.5rem;
 
         display: grid;

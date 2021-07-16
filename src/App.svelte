@@ -54,13 +54,11 @@
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
     <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
+    <Socials {initial} {w} />
 
-    <header>
+    <header >
         <Title {initial} {w} />
-        <div id="navAndSocials">
-            <NavToggleButton loading={initial} {handleNav}/>
-            <Socials {initial} {w} />
-        </div>
+        <NavToggleButton loading={initial} {handleNav}/>
     </header>
 
     {#if currentSection == 0 && outroComplete}
@@ -74,28 +72,19 @@
 
 <style>
 
+    /* SITE BREAKING FIX -> In loving memory of Frogman. */
     main {
         position: relative;
         width: 100%;
-        height: 100%;
+        min-height: 100vh;
         align-content: center;
         background-color: var(--color-grey-dark);
-
-        display: grid;
-        grid-template-rows: 10% 90%;
-
-        overflow: hidden;
     }
 
     header {
         display: flex;
         align-items: center;
         padding: 1rem;
-    }
-
-    #navAndSocials {
-        position: relative;
-        margin-left: auto;
     }
 
 </style>

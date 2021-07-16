@@ -7,7 +7,7 @@
 </script>
 
 {#if !initial}
-    <ul class="socials" transition:fly={{x: w, duration: 200}}>
+    <ul transition:fly={{x: w, duration: 200}}>
         <li>
             <a href="https://www.linkedin.com/in/spencer-venable-31494a187">
                 <img class="centeredInContainer" src="/images/linkedin.svg" alt="LinkedIn">
@@ -22,11 +22,17 @@
 {/if}
 
 <style>
-    .socials {
+    
+    ul {
+        position: fixed;
+        bottom: 0;
+        left: 0;
         display: flex;
+        flex-direction: column;
         grid-gap: .5rem;
-        margin-left: auto;
+        padding: 1rem;
     }
+
     li {
         position: relative;
         border: var(--border);
@@ -38,24 +44,14 @@
         height: 4rem;
         width: 4rem;
     }
+
     li:hover {
         transform: scale(1.1);
     }
+
     img {
         height: 50%;
         width: 50%;
-    }
-
-    @media only screen and (max-width: 650px) {
-        ul {
-            position: absolute;
-            bottom: 1;
-            right: 50%;
-            transform: translateX(50%);
-            flex-direction: column;
-            justify-items: center;
-            margin-top: 1rem;
-        }
     }
     
 </style>

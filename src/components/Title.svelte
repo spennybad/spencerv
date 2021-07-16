@@ -8,7 +8,7 @@
 
 {#if initial}
     <h1
-        class="centeredInContainer"
+        id="intro_title"
         in:fly={{ x: -w, duration: 400 }}
         out:fly={{ x: w, duration: 400 }}
     >
@@ -24,5 +24,12 @@
         font-size: var(--font-size-h1);
         color: var(--color-white);
         white-space: nowrap;
+    }
+
+    #intro_title {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 </style>

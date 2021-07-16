@@ -28,16 +28,16 @@
         background-color: var(--color-primary);
         padding: 1rem;
         font-size: var(--font-size-p);
-        font-weight: 600;
         transition: all .2s;
         cursor: pointer;
         transition: all .2s;
-        margin-right: -2rem; /* In loving memory of P_G_*/
         padding-right: 3rem; 
+        transform: translateX(2rem)
     }
 
+    /* In loving memory of Kn4ppster + FrogmanOW <3 */
     button:hover {
-        transform: translateX(-2rem);
+        transform: translateX(0rem);
     }
 
     li:not(:last-child) {

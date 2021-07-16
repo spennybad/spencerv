@@ -2,7 +2,10 @@
 
     import * as projectsData from '../../data/projects.json';
     import ProjectTile from './ProjectTile.svelte';
+    import { onMount } from 'svelte';
+
     let projectListW;
+    let mounted = false;
 
     let gridGap = 1;
 
@@ -24,7 +27,10 @@
 
     $: projectXCount = getXCount(projectListW, gridBreakPoints);
 
-    console.log(projectsData);
+    // Fixes content shift of projects being loaded.
+    onMount(() => {
+        mounted = true;
+    })
 
 </script>
 
@@ -36,11 +42,13 @@
     "
 >
     <p><span>*</span>  denotes key project.</p>
-    {#each projectsData.default as project}
+    {#if mounted}
+        {#each projectsData.default as project}
 
-        <ProjectTile {project} {projectListW} {projectXCount} {gridGap} />
+            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} />
 
-    {/each}
+        {/each}
+    {/if}
 
 </ul>
 
@@ -57,8 +65,6 @@
         justify-content: center;
         grid-auto-rows: max-content;
         list-style: none;
-        overflow-y: scroll;
-        
     }
 
     p {
@@ -74,9 +80,15 @@
         color: var(--color-accent);
     }
 
+    @media only screen and (max-width: 1000px) {
+        ul {
+            width: 80%;
+        }
+    }
+
     @media only screen and (max-width: 650px) {
         ul {
-            width: 90%;
+            width: 80%;
         }
     }
 

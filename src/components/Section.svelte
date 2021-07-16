@@ -6,6 +6,7 @@
     export let h;
     export let handleOutroEnd;
     export let styling;
+
 </script>
 
 <section 
@@ -22,7 +23,6 @@
     section {
         width: 100%;
         height: 100%;
-        max-height: 100vh;
         padding: 3rem 10rem;
         position: relative;
         z-index: 0;
@@ -35,11 +35,11 @@
         font-size: var(--font-size-h2);
         white-space: nowrap;
         line-height: 1;
-        transform-origin: bottom left;
-        transform: rotate(90deg) translateX(-20%);
-        top: 0;
+        writing-mode: vertical-rl; 
+        text-orientation: mixed;
         z-index: -1;
-
+        left: 0;
+        top: 0;
         color: var(--color-primary-trans50);
     }
     

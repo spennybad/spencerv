@@ -6,15 +6,12 @@
     - Big Projects
     - Fun Projects
 3. Testamonials
-4. Socials / GitHub
 
 
 ## TODO:
-- Re work desktop nav.
-- Fix socials positoning mobile projects page.
-- Added the testimony section.
-- Fix projects list scrollbar.
-- Add border bottom to header.
+- Change Testimony section to Experience
+- Skills
+- Reference letters.
 - Change About picture.
 - Comment code/clean code.
 - Look into changing H1 font. Current has lots of bleed.

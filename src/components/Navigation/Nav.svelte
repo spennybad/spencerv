@@ -45,8 +45,11 @@
 
 <style>
 
+    nav {
+        position: fixed;
+    }
+
     #desktop_nav {
-        position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
@@ -56,11 +59,11 @@
     #desktop_nav ul {
         list-style: none;
         text-align: right;
+        overflow: hidden;
     }
 
 
     #mobile_nav {
-        position: absolute;
         visibility: hidden;
         top: 0;
         right: 0;
