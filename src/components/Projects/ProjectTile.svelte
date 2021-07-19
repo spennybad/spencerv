@@ -1,29 +1,46 @@
 <script>
+    import { onDestroy } from 'svelte';
+
     export let project;
     export let projectListW;
 
     export let projectXCount;
     export let gridGap;
+    export let handleProjectClick;
+    export let placeHolder;
+    export let handleOutroEnded;
+
+    import {send, receive } from '../../util/crossfade';
+
+    onDestroy(() => {
+        if (placeHolder === false) handleOutroEnded();
+    })
+    
 </script>
 
-<li style="
-        width: calc({projectListW/projectXCount}px - {gridGap}rem);
-        height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
-    "
-    class:priority={project.priority}
->  
-    <img class="background_image" src={project.imagePath} alt="Project." />
-    <div class="projectHoverPanel">
-        <a href={project.url}>
-            <img src="/images/earth.svg" alt="Internet."/>
-            <p>Visit Site</p>
-        </a>
-        <a href={project.git}>
-            <img src="/images/github1.svg" alt="Github."/>
-            <p>Visit Repo</p>
-        </a>
-    </div>
-</li>
+{#if !placeHolder}
+    <li 
+        in:receive="{{key:project.id, duration: 0}}"
+        out:send="{{key:project.id, duration: 0}}"
+        on:click={() => handleProjectClick(project)}
+        style="
+            width: calc({projectListW/projectXCount}px - {gridGap}rem);
+            height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
+        "
+        class:priority={project.priority}
+    >  
+        <img class="background_image" src={project.imagePath} alt="Project." />
+    </li>
+{:else}
+    <li 
+        style="
+            width: calc({projectListW/projectXCount}px - {gridGap}rem);
+            height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
+        "
+    >
+        <img class="background_image" src={project.imagePath} alt="Project." />
+    </li>
+{/if}
 
 <style>
 
@@ -36,6 +53,8 @@
         box-shadow: var(--shadow-light);
         border: 2px solid transparent;
         transition: all .2s;
+
+        cursor: pointer;
     }
 
     li.priority:after {
@@ -56,69 +75,16 @@
         width: 100%;
 
         object-fit: cover;
+        transition: all .2s;
     }
+
+    .background_image:hover {
+        transform: scale(1.1);
+    }
+    
 
     li:hover {
         border: 2px solid var(--color-primary);
-    }
-
-    li:hover div {
-        transform: scale(1.1);
-    }
-
-    .projectHoverPanel {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 100%;
-
-        background-color: var(--color-black-trans75);
-        visibility: hidden;
-        opacity: 0;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 100%;
-        place-items: center;
-
-        transition: all .2s;
-    }
-
-    .projectHoverPanel a {
-        display: grid;
-        place-items: center;
-        
-        transition: all .2s;
-    }
-
-    a { 
-        text-decoration: none;
-        appearance: none;
-    }
-
-    .projectHoverPanel a p {
-        margin-top: .5rem;
-        background-color: var(--color-grey-dark);
-        color: var(--color-primary);
-        padding: .25rem;
-        border: none;
-    }
-
-    .projectHoverPanel a img {
-        filter: invert();
-        height: 100%;
-        width: 100%;
-    }
-
-    .projectHoverPanel a:hover {
-        transform: scale(1.1);
-    }
-
-    li:hover .projectHoverPanel {
-        visibility: visible;
-        opacity: 1;
     }
 
 </style>

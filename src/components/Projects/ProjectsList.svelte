@@ -4,9 +4,13 @@
     import ProjectTile from './ProjectTile.svelte';
     import { onMount } from 'svelte';
 
-    let projectListW;
-    let mounted = false;
+    export let handleProjectClick;
+    export let clickedProject;
+    export let outroEnded;
 
+    let mounted = false;
+    
+    let projectListW;
     let gridGap = 1;
 
     const gridBreakPoints = {
@@ -32,6 +36,10 @@
         mounted = true;
     })
 
+    const handleOutroEnded = () => {
+        outroEnded = true;
+    }
+
 </script>
 
 <ul bind:clientWidth={projectListW}
@@ -44,12 +52,15 @@
     <p><span>*</span>  denotes key project.</p>
     {#if mounted}
         {#each projectsData.default as project}
-
-            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} />
-
+            {#if project.id === clickedProject?.id}
+                {#if outroEnded}
+                    <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} placeHolder={true} handleOutroEnded={undefined} />
+                {/if}
+            {:else}
+                <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} placeHolder={false} {handleOutroEnded} />
+            {/if}
         {/each}
     {/if}
-
 </ul>
 
 <style>

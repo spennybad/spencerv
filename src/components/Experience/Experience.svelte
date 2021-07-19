@@ -10,7 +10,8 @@
 </script>
 
 {#if !loading}
-    <Section {h} {handleOutroEnd} sectionTitle="Testimony">
+    <Section {h} {handleOutroEnd} sectionTitle="Experience">
+        
 
     </Section>
 {/if}

@@ -18,6 +18,11 @@
                 <img class="centeredInContainer" src="/images/github.svg" alt="GitHub">
             </a>
         </li>
+        <li>
+            <a href="mailto:spencer@spencerv.dev">
+                <img class="centeredInContainer" src="/images/mail.svg" alt="GitHub">
+            </a>
+        </li>
     </ul>
 {/if}
 

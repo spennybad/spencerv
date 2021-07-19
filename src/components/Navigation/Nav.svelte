@@ -30,7 +30,7 @@
             <ul>
                 <NavButton {w} {currentSection} selection={0} {setCurrentSection} >About</NavButton>
                 <NavButton {w} {currentSection} selection={1} {setCurrentSection} >Projects</NavButton>
-                <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Testimony</NavButton>
+                <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Experience</NavButton>
             </ul>
         </nav>
     {/if}
@@ -38,7 +38,7 @@
         <ul>
             <NavButton {w} {currentSection} selection={0} {setCurrentSection} >About</NavButton>
             <NavButton {w} {currentSection} selection={1} {setCurrentSection} >Projects</NavButton>
-            <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Testimony</NavButton>
+            <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Experience</NavButton>
         </ul>
     </nav>
 {/if}
