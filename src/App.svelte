@@ -9,16 +9,17 @@
 
     import About from "./components/About.svelte";
     import Projects from "./components/Projects/Projects.svelte";
-    import Testamonials from "./components/Testamonials/Testamonials.svelte";
+    import Experience from "./components/Experience/Experience.svelte";
 
     let w;
     let h;
+    let isNavButtonShown = true;
 
     $: outroComplete = false;
     $: navPanel = false;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
-    let currentSection = 0;
+    let currentSection = 1;
 
     $: initial = false;
 
@@ -50,6 +51,10 @@
         }
     }
 
+    const toggleNavButtonVisibility = () => {
+        isNavButtonShown = !isNavButtonShown;
+    }
+
 </script>
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
@@ -58,15 +63,15 @@
 
     <header >
         <Title {initial} {w} />
-        <NavToggleButton loading={initial} {handleNav}/>
+        {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav}/> {/if}
     </header>
 
     {#if currentSection == 0 && outroComplete}
         <About loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 1 && outroComplete}
-        <Projects loading={initial} {h} {handleOutroEnd} />
+        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} />
     {:else if currentSection == 2 && outroComplete}
-        <Testamonials loading={initial} {h} {handleOutroEnd} />
+        <Experience loading={initial} {h} {handleOutroEnd} />
     {/if}
 </main>
 

@@ -5,7 +5,15 @@
         "desc": "Art portfolio and blog for rapper/actor Manny Houston.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/mannyhouston_hk4rlp.webp",
         "priority": true,
-        "git": "https://github.com/Spencercv7/mannyhouston_web"
+        "git": "https://github.com/Spencercv7/mannyhouston_web",
+        "id": 1,
+        "stackList": [
+                "Next JS",
+                "CSS",
+                "CMS",
+                "React",
+                "Styled Components"
+        ]
     }
     ,
     {
@@ -13,13 +21,27 @@
         "desc": "Unix timestamp converter application.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/epochconverter_xz9sqc.webp",
         "priority": false,
-        "git": "https://github.com/Spencercv7/epoch-converter"
+        "git": "https://github.com/Spencercv7/epoch-converter",
+        "id": 2,
+        "stackList": [
+            "Svelte",
+            "CSS",
+            "HTML",
+            "Javascript"
+        ]
     },
     {
         "url": "https://aim-trainer.vercel.app/",
         "desc": "Aim traning application for mouse accuracy.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/aimtrainner_p9fdvf.webp",
         "priority": false,
-        "git": "https://github.com/Spencercv7/aim-trainer"   
+        "git": "https://github.com/Spencercv7/aim-trainer",
+        "id": 3,
+        "stackList": [
+            "Svelte",
+            "CSS",
+            "HTML",
+            "Javascript"
+        ]
     }
 ]

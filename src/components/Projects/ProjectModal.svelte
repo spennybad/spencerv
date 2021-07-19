@@ -1,5 +1,7 @@
 <script>
     import {send, receive } from '../../util/crossfade';
+    import { fade } from 'svelte/transition';
+    import SkillTile from '../Projects/SkillTile.svelte';
 
     export let clickedProject = undefined;
     export let handleOutroReset;
@@ -15,6 +17,7 @@
 
 {#if clickedProject}
     <div 
+        transition:fade="{{duration: 200}}"
         on:click|self={handleModalClose} id="project_modal" class="centeredInContainer">
         <img
             src={clickedProject.imagePath}
@@ -22,6 +25,15 @@
             out:send="{{key:currentId}}"
             alt={clickedProject.desc}
         />
+        <div id="project_info">
+            <p>{clickedProject.desc}</p>
+            <ul>
+                {#each clickedProject.stackList as tech}
+                    <SkillTile {tech}/>
+                {/each}
+            </ul>
+        </div>
+
         <button on:click={handleModalClose}>X</button>
     </div>
 {/if}
@@ -38,7 +50,8 @@
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        place-items: center;
+        justify-items: center;
+        align-items: center;
 
     }
 
@@ -61,6 +74,16 @@
     img {
         height: auto;
         width: 70%;
+        border: 2px solid var(--color-white);
+        align-self: center;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #project_modal {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 2fr;
+            align-items: unset;
+        }
     }
 </style>
-
+ 

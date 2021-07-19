@@ -7,17 +7,20 @@
     export let loading;
     export let handleOutroEnd;
     export let h;
+    export let toggleNavButtonVisibility;
 
     let outroEnded = false;
 
     const handleOutroReset = () => {
         outroEnded = false;
+        toggleNavButtonVisibility();
     }
 
     let clickedProject;
 
     const handleProjectClick = (project) => {
         clickedProject = project;
+        toggleNavButtonVisibility();
     }
 
 </script>

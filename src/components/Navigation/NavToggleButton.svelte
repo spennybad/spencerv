@@ -33,7 +33,7 @@
         background: none;
         visibility: hidden;
 
-        z-index: 2;
+        z-index: 101;
 
         cursor: pointer;
     }

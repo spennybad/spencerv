@@ -5,13 +5,18 @@
 2. Projects
     - Big Projects
     - Fun Projects
-3. Testamonials
+    - Project Modals (or something of the sort).
+3. Experience
+    - Digit Resume
+    - Physical Resume download
+    - Reference Letters
 
 
 ## TODO:
-- Change Testimony section to Experience
 - Skills
+    - Skills will be added in the form of tiles in the project modals.
 - Reference letters.
 - Change About picture.
 - Comment code/clean code.
 - Look into changing H1 font. Current has lots of bleed.
+- Add more  details to about section. 
