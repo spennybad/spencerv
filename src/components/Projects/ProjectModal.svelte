@@ -18,41 +18,45 @@
 {#if clickedProject}
     <div 
         transition:fade="{{duration: 200}}"
-        on:click|self={handleModalClose} id="project_modal" class="centeredInContainer">
+        on:click|self={handleModalClose} 
+        id="project_modal" 
+        class="centeredInContainer"
+    >
+        <button on:click={handleModalClose}>X</button>
         <img
             src={clickedProject.imagePath}
-            in:receive="{{key:clickedProject.id}}"
-            out:send="{{key:currentId}}"
             alt={clickedProject.desc}
-        />
-        <div id="project_info">
-            <p>{clickedProject.desc}</p>
-            <ul>
-                {#each clickedProject.stackList as tech}
-                    <SkillTile {tech}/>
-                {/each}
-            </ul>
-        </div>
-
-        <button on:click={handleModalClose}>X</button>
+        >
+        <ul id="skill_list">
+            {#each clickedProject.stackList as tech}
+                <SkillTile {tech}/>
+            {/each}
+        </ul>
+        <p>{clickedProject.desc}</p>x
     </div>
 {/if}
-
 
 <style>
     #project_modal {
         height: 100%;
         width: 100%;
-        background-color: var(--color-black-trans75);
+        background-color: var(--color-black-trans90);
         position: fixed;
         box-shadow: var(--box-shadow-light);
         z-index: 101;
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
         justify-items: center;
-        align-items: center;
+        grid-auto-rows: max-content;
+    }
 
+    #skill_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        gap: 1rem;
     }
 
     button {
@@ -73,17 +77,10 @@
 
     img {
         height: auto;
-        width: 70%;
+        width: 90%;
+        max-width: 40rem;
         border: 2px solid var(--color-white);
         align-self: center;
-    }
-
-    @media only screen and (max-width: 800px) {
-        #project_modal {
-            grid-template-columns: 100%;
-            grid-template-rows: 1fr 2fr;
-            align-items: unset;
-        }
     }
 </style>
  

@@ -9,8 +9,7 @@
 </script>
 
 <li 
-    in:fly="{{x: w, duration: 200, delay: selection * 100}}"
-    out:fly="{{x: w, duration: 200, delay: selection * 100}}"
+    transition:fly="{{x: w, duration: 200, delay: selection * 100}}"
 >
     <button 
         on:click={() => {
@@ -25,14 +24,16 @@
 
     button {
         border: none;
-        background-color: var(--color-primary);
+        background-color: var(--color-white);
+        color: var(--color-black);
         padding: 1rem;
         font-size: var(--font-size-p);
         transition: all .2s;
         cursor: pointer;
         transition: all .2s;
         padding-right: 3rem; 
-        transform: translateX(2rem)
+        transform: translateX(2rem);
+        box-shadow: var(--box-shadow-primary);
     }
 
     /* In loving memory of Kn4ppster + FrogmanOW <3 */
@@ -50,8 +51,6 @@
             padding-right: 1rem;
             margin-right: 0rem;
             font-size: var(--font-size-h4);
-            color: var(--color-primary);
-            background-color: var(--color-grey-light);
         }
 
         li:not(:last-child) {

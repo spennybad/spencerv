@@ -1,5 +1,4 @@
 <script>
-    import { onDestroy } from 'svelte';
 
     export let project;
     export let projectListW;
@@ -7,40 +6,19 @@
     export let projectXCount;
     export let gridGap;
     export let handleProjectClick;
-    export let placeHolder;
-    export let handleOutroEnded;
 
-    import {send, receive } from '../../util/crossfade';
-
-    onDestroy(() => {
-        if (placeHolder === false) handleOutroEnded();
-    })
-    
 </script>
 
-{#if !placeHolder}
-    <li 
-        in:receive="{{key:project.id, duration: 0}}"
-        out:send="{{key:project.id, duration: 0}}"
-        on:click={() => handleProjectClick(project)}
-        style="
-            width: calc({projectListW/projectXCount}px - {gridGap}rem);
-            height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
-        "
-        class:priority={project.priority}
-    >  
-        <img class="background_image" src={project.imagePath} alt="Project." />
-    </li>
-{:else}
-    <li 
-        style="
-            width: calc({projectListW/projectXCount}px - {gridGap}rem);
-            height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
-        "
-    >
-        <img class="background_image" src={project.imagePath} alt="Project." />
-    </li>
-{/if}
+<li 
+    on:click={() => handleProjectClick(project)}
+    style="
+        width: calc({projectListW/projectXCount}px - {gridGap}rem);
+        height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
+    "
+    class:priority={project.priority}
+>  
+    <img class="background_image" src={project.imagePath} alt="Project." />
+</li>
 
 <style>
 

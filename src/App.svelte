@@ -55,12 +55,13 @@
         isNavButtonShown = !isNavButtonShown;
     }
 
+
 </script>
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
     <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
     <Socials {initial} {w} />
-
+    
     <header >
         <Title {initial} {w} />
         {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav}/> {/if}

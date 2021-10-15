@@ -5,7 +5,6 @@
     import { onMount } from 'svelte';
 
     export let handleProjectClick;
-    export let clickedProject;
     export let outroEnded;
 
     let mounted = false;
@@ -52,13 +51,7 @@
     <p><span>*</span>  denotes key project.</p>
     {#if mounted}
         {#each projectsData.default as project}
-            {#if project.id === clickedProject?.id}
-                {#if outroEnded}
-                    <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} placeHolder={true} handleOutroEnded={undefined} />
-                {/if}
-            {:else}
-                <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} placeHolder={false} {handleOutroEnded} />
-            {/if}
+            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} {handleOutroEnded} />
         {/each}
     {/if}
 </ul>

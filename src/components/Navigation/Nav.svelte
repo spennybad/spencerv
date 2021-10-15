@@ -59,7 +59,6 @@
     #desktop_nav ul {
         list-style: none;
         text-align: right;
-        overflow: hidden;
     }
 
 

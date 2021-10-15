@@ -20,6 +20,7 @@
     --color-accent: #ff6188;
 
     --box-shadow-light: 1px 1px 2px var(--color-black-trans75);
+    --box-shadow-primary: 3px 3px 0px var(--color-primary);
 }
 
 *,
