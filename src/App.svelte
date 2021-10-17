@@ -17,6 +17,7 @@
 
     $: outroComplete = false;
     $: navPanel = false;
+    $: showNav = true;
 
     // 0 == About, 1 == Projects, 2 == Testimonials
     let currentSection = 1;
@@ -55,13 +56,14 @@
         isNavButtonShown = !isNavButtonShown;
     }
 
-
+    const toggleNavVisibility = () => {
+        showNav = !showNav;
+    }
 </script>
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
-    <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
+    {#if showNav} <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} /> {/if}
     <Socials {initial} {w} />
-    
     <header >
         <Title {initial} {w} />
         {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav}/> {/if}
@@ -70,7 +72,7 @@
     {#if currentSection == 0 && outroComplete}
         <About loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 1 && outroComplete}
-        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} />
+        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} {toggleNavVisibility}/>
     {:else if currentSection == 2 && outroComplete}
         <Experience loading={initial} {h} {handleOutroEnd} />
     {/if}
@@ -85,6 +87,7 @@
         min-height: 100vh;
         align-content: center;
         background-color: var(--color-grey-dark);
+        overflow: hidden;
     }
 
     header {

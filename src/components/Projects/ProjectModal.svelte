@@ -1,10 +1,11 @@
 <script>
-    import {send, receive } from '../../util/crossfade';
-    import { fade } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     import SkillTile from '../Projects/SkillTile.svelte';
 
     export let clickedProject = undefined;
     export let handleOutroReset;
+
+    let w;
 
     $: currentId = clickedProject ? clickedProject.id : currentId;
 
@@ -17,22 +18,38 @@
 
 {#if clickedProject}
     <div 
-        transition:fade="{{duration: 200}}"
+        bind:clientWidth={w}
+        transition:fly="{{x: w, duration: 200}}"
         on:click|self={handleModalClose} 
         id="project_modal" 
         class="centeredInContainer"
     >
-        <button on:click={handleModalClose}>X</button>
-        <img
-            src={clickedProject.imagePath}
-            alt={clickedProject.desc}
+        <button 
+            on:click={handleModalClose}
+            id="exit_button"
         >
+            <img
+                src={"/images/x.svg"}
+                alt={"Exit Icon."}
+            >
+        </button>
+        <a
+            href={clickedProject.url}
+            target="_blank"
+            id="image_hover"
+        >
+            <img
+                src={clickedProject.imagePath}
+                alt={clickedProject.desc}
+                id="project_img"
+            >
+        </a>
         <ul id="skill_list">
             {#each clickedProject.stackList as tech}
                 <SkillTile {tech}/>
             {/each}
         </ul>
-        <p>{clickedProject.desc}</p>x
+        <p>{clickedProject.desc}</p>
     </div>
 {/if}
 
@@ -49,6 +66,7 @@
         align-content: center;
         justify-items: center;
         grid-auto-rows: max-content;
+        gap: 3rem;
     }
 
     #skill_list {
@@ -59,13 +77,14 @@
         gap: 1rem;
     }
 
-    button {
+    #exit_button {
         position: absolute;
         top: 0;
         right: 0;
         margin: 1rem;
         border: none;
-        background-color: var(--color-primary);
+        background-color: transparent;
+        appearance: none;
 
         height: 2rem;
         width: 2rem;
@@ -73,14 +92,51 @@
         font-size: var(--font-size-p);
         border-radius: 100%;
         cursor: pointer;
+        filter: invert();
+        transition: all .2s;
     }
 
-    img {
-        height: auto;
+    #exit_button:hover {
+        transform: scale(0.90);
+    }
+
+    #image_hover {
+        position: relative;
         width: 90%;
         max-width: 40rem;
+        overflow: hidden;
+    }
+
+    #image_hover:before {
+        content: "Click to Visit";
+        width: max-content;
+        height: max-content;
+        background-color: var(--color-black-trans90);
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        transform: translateX(100%);
+        transition: all .2s;
+    }
+
+    #image_hover:hover:before {
+        transform: translateX(-1px);
+    }
+    
+    #project_img {
+        height: auto;
+        width: 100%;
         border: 2px solid var(--color-white);
-        align-self: center;
+    }
+
+    p {
+        font-size: var(--font-size-p);
+        color: var(--color-white);
+        text-align: center;
     }
 </style>
  

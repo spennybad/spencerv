@@ -15,7 +15,6 @@
         width: calc({projectListW/projectXCount}px - {gridGap}rem);
         height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
     "
-    class:priority={project.priority}
 >  
     <img class="background_image" src={project.imagePath} alt="Project." />
 </li>
@@ -33,18 +32,6 @@
         transition: all .2s;
 
         cursor: pointer;
-    }
-
-    li.priority:after {
-        content: "*";
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: var(--font-size-h1);
-        line-height: .8;
-        color: var(--color-accent);
-        padding: .5rem;
-        text-shadow: 1px 1px 2px var(--color-black-trans75);
     }
 
 

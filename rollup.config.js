@@ -42,7 +42,8 @@ export default {
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
-			}
+			},
+			include: 'src/**/*.svelte'
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
@@ -76,6 +77,6 @@ export default {
 		production && terser()
 	],
 	watch: {
-		clearScreen: false
+		clearScreen: true
 	}
 };

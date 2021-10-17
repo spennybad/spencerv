@@ -9,7 +9,7 @@
 </script>
 
 <li 
-    transition:fly="{{x: w, duration: 200, delay: selection * 100}}"
+    in:fly="{{x: w, duration: 200, delay: selection * 100}}"
 >
     <button 
         on:click={() => {

@@ -4,18 +4,30 @@
         "url": "https://www.mannyhouston.com/",
         "desc": "Art portfolio and blog for rapper/actor Manny Houston.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/mannyhouston_hk4rlp.webp",
-        "priority": true,
         "git": "https://github.com/Spencercv7/mannyhouston_web",
         "id": 1,
         "stackList": [
                 "Next JS",
                 "CSS",
-                "CMS",
+                "CMS (Contentful",
                 "React",
                 "Styled Components"
         ]
-    }
-    ,
+    },
+    {
+        "url": "https://www.venablepark.com/",
+        "desc": "Website for Venable Park Investment Counsel Inc.",
+        "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634344498/spencerv/VenablePark_myfsz3.webp",
+        "git": "https://github.com/Spencercv7/mannyhouston_web",
+        "id": 1,
+        "stackList": [
+                "Next JS",
+                "CSS",
+                "CMS (Sanity)",
+                "React",
+                "Styled Components"
+        ]
+    },
     {
         "url": "https://epoch-converter.vercel.app/",
         "desc": "Unix timestamp converter application.",

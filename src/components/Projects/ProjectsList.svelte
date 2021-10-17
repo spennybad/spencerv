@@ -48,7 +48,6 @@
         padding: calc({gridGap}rem + 1rem);
     "
 >
-    <p><span>*</span>  denotes key project.</p>
     {#if mounted}
         {#each projectsData.default as project}
             <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} {handleOutroEnded} />
@@ -69,19 +68,6 @@
         justify-content: center;
         grid-auto-rows: max-content;
         list-style: none;
-    }
-
-    p {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: var(--color-white);
-        display: flex;
-        font-size: var(--font-size-p);
-    }
-
-    p span {
-        color: var(--color-accent);
     }
 
     @media only screen and (max-width: 1000px) {
