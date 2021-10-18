@@ -22,23 +22,25 @@
         handleNav(false);
     }
 
+    const pages = ["Home", "About Me", "Projects"]
+
 </script>
 
 {#if !loading}
     {#if navPanel}
         <nav id="mobile_nav" transition:fly="{{x: w, duration: 100}}">
             <ul>
-                <NavButton {w} {currentSection} selection={0} {setCurrentSection} >About</NavButton>
-                <NavButton {w} {currentSection} selection={1} {setCurrentSection} >Projects</NavButton>
-                <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Experience</NavButton>
+                {#each pages as page, index}
+                    <NavButton {w} {currentSection} selection={index} {setCurrentSection} >{page}</NavButton>
+                {/each}
             </ul>
         </nav>
     {/if}
     <nav id="desktop_nav">
         <ul>
-            <NavButton {w} {currentSection} selection={0} {setCurrentSection} >About</NavButton>
-            <NavButton {w} {currentSection} selection={1} {setCurrentSection} >Projects</NavButton>
-            <NavButton {w} {currentSection} selection={2} {setCurrentSection} >Experience</NavButton>
+            {#each pages as page, index}
+                <NavButton {w} {currentSection} selection={index} {setCurrentSection} >{page}</NavButton>
+            {/each}
         </ul>
     </nav>
 {/if}

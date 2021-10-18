@@ -1,0 +1,50 @@
+[
+    {
+        "skill": "HTML5",
+        "level": 3
+    },
+    {
+        "skill": "CSS3",
+        "level": 3
+    },
+    {
+        "skill": "React",
+        "level": 3
+    },
+    {
+        "skill": "Next JS",
+        "level": 3
+    },
+    {
+        "skill": "Gatsby JS",
+        "level": 2
+    },
+    {
+        "skill": "Svelte",
+        "level": 2
+    },
+    {
+        "skill": "Node JS",
+        "level": 2
+    },
+    {
+        "skill": "Unity",
+        "level": 1
+    },
+    {
+        "skill": "Kafka",
+        "level": 2
+    },
+    {
+        "skill": "TypeScript",
+        "level": 2
+    },
+    {
+        "skill": "Chakra UI",
+        "level": 1
+    },
+    {
+        "skill": "PostgreSQL",
+        "level": 1
+    }
+]

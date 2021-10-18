@@ -14,7 +14,7 @@
             </a>
         </li>
         <li>
-            <a href="https://github.com/Spencercv7/aim-trainer">
+            <a href="https://github.com/Spencercv7">
                 <img class="centeredInContainer" src="/images/github.svg" alt="GitHub">
             </a>
         </li>

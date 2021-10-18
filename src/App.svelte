@@ -7,9 +7,9 @@
     import Socials from "./components/Socials.svelte";
     import NavToggleButton from "./components/Navigation/NavToggleButton.svelte";
 
-    import About from "./components/About.svelte";
+    import Home from "./components/Home.svelte";
     import Projects from "./components/Projects/Projects.svelte";
-    import Experience from "./components/Experience/Experience.svelte";
+    import About from "./components/About/About.svelte";
 
     let w;
     let h;
@@ -19,7 +19,7 @@
     $: navPanel = false;
     $: showNav = true;
 
-    // 0 == About, 1 == Projects, 2 == Testimonials
+    // 0 == Home, 1 == About Me, 2 == Projects
     let currentSection = 1;
 
     $: initial = false;
@@ -31,6 +31,7 @@
             initial = false;
             clearInterval(interval);
         }, 1000);
+        
         outroComplete = true;
     });
 
@@ -70,11 +71,11 @@
     </header>
 
     {#if currentSection == 0 && outroComplete}
-        <About loading={initial} {h} {handleOutroEnd} />
+        <Home loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 1 && outroComplete}
-        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} {toggleNavVisibility}/>
+        <About loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 2 && outroComplete}
-        <Experience loading={initial} {h} {handleOutroEnd} />
+        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} {toggleNavVisibility}/>
     {/if}
 </main>
 

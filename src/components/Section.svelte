@@ -5,7 +5,7 @@
     export let sectionTitle;
     export let h;
     export let handleOutroEnd;
-    export let styling;
+    export let styling = null;
 
 </script>
 
@@ -16,7 +16,7 @@
     class={styling}
 >
     <h2>{sectionTitle}</h2>
-    <slot></slot>
+    <slot />
 </section>
 
 <style>

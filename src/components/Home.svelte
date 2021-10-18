@@ -10,12 +10,12 @@
 </script>
 
 {#if !loading}
-    <Section {h} {handleOutroEnd} sectionTitle="About Me" styling="about">
-        <div id="about_wrapper">
+    <Section {h} {handleOutroEnd} sectionTitle="Home" styling="home">
+        <div id="home_wrapper">
             <div id="photo">
                 <img src="/images/channel-icon.jpeg" alt="French Boy"/>
             </div>
-            <div id="about_text">
+            <div id="home_text">
                 <p><span>Hello!</span></p>
                 <p>My name is Spencer and I am a web developer.</p>
                 <p>I love staying up to date with the most modern tech and sharing my love for web development with others.</p>
@@ -26,7 +26,7 @@
 
 <style>
     
-    #about_wrapper {
+    #home_wrapper {
         display: grid;
         grid-template-rows: min-content auto;
         grid-template-columns: 40%;
@@ -34,7 +34,7 @@
         justify-content: center;
     }
 
-    #about_text > :not(:last-child) {
+    #home_text > :not(:last-child) {
         margin-bottom: 1rem;
         justify-self: center;
     }
@@ -68,19 +68,19 @@
     }
 
     @media only screen and (max-width: 1499px) {
-        #about_wrapper {
+        #home_wrapper {
             grid-template-columns: 50%;
         }
     }
     
     @media only screen and (max-width: 1100px) {
-        #about_wrapper {
+        #home_wrapper {
             grid-template-columns: 60%;
         }
     }
     
     @media only screen and (max-width: 800px) {
-        #about_wrapper {
+        #home_wrapper {
             grid-template-columns: 80%;
         }
     }
