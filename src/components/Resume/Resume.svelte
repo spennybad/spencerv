@@ -1,7 +1,7 @@
 <script>
 
-    import Section from '../comps/Section.svelte';
-    import SkillTile from '../comps/SkillTile.svelte';
+    import Section from '../Comps/Section.svelte';
+    import SkillTile from '../Comps/SkillTile.svelte';
     import * as skillsData from '../../data/skills.json';
 
     export let loading;
