@@ -1,6 +1,6 @@
 <script>
 
-    import Section from '../comps/Section.svelte';
+    import Section from '../Comps/Section.svelte';
     import ProjectList from './ProjectsList.svelte';
     import ProjectModal from './ProjectModal.svelte';
 
