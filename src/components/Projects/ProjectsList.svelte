@@ -45,12 +45,11 @@
     style="
         grid-template-columns: repeat({projectXCount}, 1fr);
         grid-gap: {gridGap}rem;
-        padding: calc({gridGap}rem + 1rem);
     "
 >
     {#if mounted}
         {#each projectsData.default as project}
-            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} {handleOutroEnded} />
+            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} />
         {/each}
     {/if}
 </ul>
@@ -64,22 +63,9 @@
         position: relative;
         
         display: grid;
-        justify-self: center;
-        justify-content: center;
         grid-auto-rows: max-content;
         list-style: none;
-    }
-
-    @media only screen and (max-width: 1000px) {
-        ul {
-            width: 80%;
-        }
-    }
-
-    @media only screen and (max-width: 650px) {
-        ul {
-            width: 80%;
-        }
+        border: 2px solid blueviolet;
     }
 
 </style>

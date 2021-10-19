@@ -1,6 +1,6 @@
 <script>
     import { fly } from 'svelte/transition';
-    import SkillTile from '../SkillTile.svelte';
+    import SkillTile from '../comps/SkillTile.svelte';
 
     export let clickedProject = undefined;
     export let handleOutroReset;

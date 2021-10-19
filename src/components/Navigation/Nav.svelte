@@ -5,7 +5,7 @@
     export let currentSection;
     export let loading;
     export let handleOutroStart;
-    export let navPanel;
+    export let navPanel = false;
     export let handleNav;
 
     export let w;
@@ -18,54 +18,28 @@
         }
     }
 
-    $: if (w > 650) {
-        handleNav(false);
-    }
-
-    const pages = ["Home", "About Me", "Projects"]
+    const pages = ["Home", "Resume", "Projects"]
 
 </script>
 
 {#if !loading}
     {#if navPanel}
-        <nav id="mobile_nav" transition:fly="{{x: w, duration: 100}}">
+        <nav 
+            transition:fly="{{x: w, duration: 100}}"
+        >
             <ul>
                 {#each pages as page, index}
-                    <NavButton {w} {currentSection} selection={index} {setCurrentSection} >{page}</NavButton>
+                    <NavButton {w} selection={index} {setCurrentSection} >{page}</NavButton>
                 {/each}
             </ul>
         </nav>
     {/if}
-    <nav id="desktop_nav">
-        <ul>
-            {#each pages as page, index}
-                <NavButton {w} {currentSection} selection={index} {setCurrentSection} >{page}</NavButton>
-            {/each}
-        </ul>
-    </nav>
 {/if}
 
 <style>
 
     nav {
         position: fixed;
-    }
-
-    #desktop_nav {
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        z-index: 1; /* SITE BREAKING FIX - Love: P_G_*/
-    }
-
-    #desktop_nav ul {
-        list-style: none;
-        text-align: right;
-    }
-
-
-    #mobile_nav {
-        visibility: hidden;
         top: 0;
         right: 0;
         height: 100%;
@@ -76,20 +50,11 @@
         z-index: 1;
     }
 
-    #mobile_nav ul {
+    nav ul {
         list-style: none;
         text-align: center;
     }
+
+
     
-
-    @media only screen and (max-width: 650px) {
-        #mobile_nav {
-            visibility: visible;
-        }
-
-        #desktop_nav {
-            visibility: hidden;
-        }
-    }
-
 </style>

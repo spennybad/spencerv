@@ -1,13 +1,11 @@
 <script>
     import { fly } from 'svelte/transition';
 
-    export let initial;
-    export let w; 
-
+    export let loading;
 </script>
 
-{#if !initial}
-    <ul transition:fly={{x: w, duration: 200}}>
+{#if !loading}
+    <ul>
         <li>
             <a href="https://www.linkedin.com/in/spencer-venable-31494a187">
                 <img class="centeredInContainer" src="/images/linkedin.svg" alt="LinkedIn">
@@ -29,13 +27,10 @@
 <style>
     
     ul {
-        position: fixed;
-        bottom: 0;
-        left: 0;
         display: flex;
         flex-direction: column;
-        grid-gap: .5rem;
-        padding: 1rem;
+        position: sticky;
+        top: 0;
     }
 
     li {

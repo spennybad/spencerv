@@ -1,7 +1,7 @@
 :root {
     --font-size-h1: clamp(1.5rem, 6vw, 3.052rem);
-    --font-size-h2: clamp(3.052rem, 10vh, 7.451rem);
-    --font-size-h3: clamp(2.441rem, 4vw, 3.052rem);
+    --font-size-h2: clamp(2.441rem, 9vh, 7.451rem);
+    --font-size-h3: clamp(1.953rem, 4vw, 3.052rem);
     --font-size-h4: clamp(1.953rem, 3vw, 2.441rem);
     --font-size-p: clamp(.9rem, 2vw ,1.25rem);
 

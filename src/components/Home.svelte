@@ -1,16 +1,17 @@
 <script>
 
-    import Section from './Section.svelte';
+    import Section from './comps/Section.svelte';
 
     export let loading;
     export let handleOutroEnd;
-    
+
+    export let w;
     export let h;
 
 </script>
 
 {#if !loading}
-    <Section {h} {handleOutroEnd} sectionTitle="Home" styling="home">
+     <Section {w} {h} {loading} {handleOutroEnd} sectionTitle="Home">
         <div id="home_wrapper">
             <div id="photo">
                 <img src="/images/channel-icon.jpeg" alt="French Boy"/>

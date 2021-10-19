@@ -18,7 +18,6 @@
     button {
         position: relative;
 
-        appearance: none;
         border: none;
 
         margin-left: auto;
@@ -31,7 +30,6 @@
         gap: .4rem;
 
         background: none;
-        visibility: hidden;
 
         z-index: 101;
 
@@ -42,12 +40,6 @@
         height: .2rem;
         width: 100%;
         background-color: var(--color-primary);
-    }
-        
-    @media only screen and (max-width: 650px) {
-        button {
-            visibility: visible;
-        }
     }
 
 </style>

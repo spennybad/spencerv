@@ -1,16 +1,15 @@
 <script>
 
-    import Section from '../Section.svelte';
-    import SkillTile from '../SkillTile.svelte';
+    import Section from '../comps/Section.svelte';
+    import SkillTile from '../comps/SkillTile.svelte';
     import * as skillsData from '../../data/skills.json';
 
     export let loading;
     export let handleOutroEnd;
     
+    export let w;
     export let h;
-
-    const aboutSum = "I am a passionate web developer who spends my freetime learning the latest technologies and sharing my passion with other like minded developers. I have experience in freelance and corperate development and always provide elegant, efficent results."
-
+    
     let proficent = [];
     let comfortable = [];
     let learning = [];
@@ -24,19 +23,10 @@
 </script>
 
 {#if !loading}
-    <Section {h} {handleOutroEnd} sectionTitle="About Me">
+    <Section {w} {h} {loading} {handleOutroEnd} sectionTitle="Resume">
         <div
-            id="about_wrapper"
+            id="resume_wrapper"
         >
-            <div
-                id="about_sum"
-            >
-                <div
-                    id="headshot"
-                >
-                </div>
-                <p>{aboutSum}</p>
-            </div>
             <div
                 id="skills"
             >
@@ -63,34 +53,12 @@
 
 <style>
 
-    #about_wrapper {
+    #resume_wrapper {
         position: relative;
         height: 100%;
         width: 100%;
-        padding: 1rem;
         display: grid;
         gap: 5vw;
-    }
-
-    #about_sum {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 3rem;
-        place-items: center;
-    }
-
-    p {
-        color: var(--color-white); 
-        font-size: var(--font-size-p);
-    }
-
-    #headshot {
-        height: 15vw;
-        width: 15vw;
-        min-width: 10rem;
-        min-height: 10rem;
-        background-color: var(--color-primary);
-        border-radius: 100%;
     }
 
     h2 {
@@ -101,7 +69,7 @@
     #skills {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1.5rem;
     }
 
     ul {
@@ -112,14 +80,4 @@
         gap: 1rem;
     }
 
-
-    @media only screen and (max-width: 600px) {
-        #about_sum {
-            grid-template-columns: 100%;
-        }
-
-        #headshot {
-            display: none;
-        }
-    }
 </style>

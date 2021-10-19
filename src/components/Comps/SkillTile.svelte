@@ -3,7 +3,7 @@
 </script>
 
 <li>
-    {tech}
+    <p>{tech}</p>
 </li>
 
 <style>
@@ -12,5 +12,9 @@
         background-color: var(--color-white);
         box-shadow: var(--box-shadow-primary);
         padding: .5rem;
+    }
+
+    p {
+        white-space: nowrap;
     }
 </style>

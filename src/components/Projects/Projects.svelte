@@ -1,11 +1,12 @@
 <script>
 
-    import Section from '../Section.svelte';
+    import Section from '../comps/Section.svelte';
     import ProjectList from './ProjectsList.svelte';
     import ProjectModal from './ProjectModal.svelte';
 
     export let loading;
     export let handleOutroEnd;
+    export let w;
     export let h;
     export let toggleNavButtonVisibility;
     export let toggleNavVisibility;
@@ -30,12 +31,13 @@
 
 {#if !loading}
     <Section 
+        {w}
         {h} 
+        {loading}
         {handleOutroEnd}  
         sectionTitle="Projects" 
-        styling="projects"
     >
-        <ProjectList {handleProjectClick} {clickedProject} bind:outroEnded />
+        <ProjectList {handleProjectClick} bind:outroEnded />
         <ProjectModal bind:clickedProject {handleOutroReset} />
     </Section>
 {/if}

@@ -45,22 +45,5 @@
         margin-bottom: .5rem;
     }
 
-    /* REMOVES MARGIN AND PADDING FOR MOBILE NAVIGATION */
-    @media only screen and (max-width: 650px) {
-        button {
-            padding-right: 1rem;
-            margin-right: 0rem;
-            font-size: var(--font-size-h4);
-        }
-
-        li:not(:last-child) {
-            margin-bottom: 2rem;
-        }
-        
-        button:hover {
-            transform: translateX(-.5rem);
-        }
-    }
-
 
 </style>
