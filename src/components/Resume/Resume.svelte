@@ -7,7 +7,6 @@
     export let loading;
     export let handleOutroEnd;
     
-    export let w;
     export let h;
     
     let proficent = [];
@@ -23,7 +22,7 @@
 </script>
 
 {#if !loading}
-    <Section {w} {h} {loading} {handleOutroEnd} sectionTitle="Resume">
+    <Section {h} {loading} {handleOutroEnd} sectionTitle="Resume">
         <div
             id="resume_wrapper"
         >

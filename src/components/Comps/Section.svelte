@@ -4,8 +4,7 @@
 
     // Props
     export let sectionTitle;
-    export let loading;
-    export let w;    
+    export let loading;  
     export let h;
     export let handleOutroEnd;
 

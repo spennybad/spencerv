@@ -69,11 +69,11 @@
     </header>
 
     {#if currentSection == 0 && outroComplete}
-        <Home loading={initial} {w} {h} {handleOutroEnd} />
+        <Home loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 1 && outroComplete}
-        <Resume loading={initial} {w} {h} {handleOutroEnd} />
+        <Resume loading={initial} {h} {handleOutroEnd} />
     {:else if currentSection == 2 && outroComplete}
-        <Projects loading={initial} {w} {h} {handleOutroEnd} {toggleNavButtonVisibility} {toggleNavVisibility}/>
+        <Projects loading={initial} {h} {handleOutroEnd} {toggleNavButtonVisibility} {toggleNavVisibility}/>
     {/if}
 </main>
 

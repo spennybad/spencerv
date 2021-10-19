@@ -6,7 +6,6 @@
 
     export let loading;
     export let handleOutroEnd;
-    export let w;
     export let h;
     export let toggleNavButtonVisibility;
     export let toggleNavVisibility;
@@ -31,7 +30,6 @@
 
 {#if !loading}
     <Section 
-        {w}
         {h} 
         {loading}
         {handleOutroEnd}  
