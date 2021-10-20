@@ -38,6 +38,13 @@
         grid-template-rows: auto 1fr;
         align-items: end;
         justify-items: center;
+        margin-right: 1rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        aside {
+            margin-right: 0rem;
+        }
     }
 
     h2 {

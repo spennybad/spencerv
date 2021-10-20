@@ -28,7 +28,6 @@
         color: var(--color-black);
         padding: 1rem;
         font-size: var(--font-size-p);
-        transition: all .2s;
         cursor: pointer;
         transition: all .2s;
         padding-right: 3rem; 

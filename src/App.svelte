@@ -79,6 +79,13 @@
 
 <style>
 
+    /* Global H2 Styling */
+    :global(h3) {
+        font-size: var(--font-size-h3);
+        color: var(--color-primary);
+        margin-bottom: 1.5rem;
+    }
+
     main {
         position: relative;
 

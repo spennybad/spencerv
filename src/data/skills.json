@@ -46,5 +46,29 @@
     {
         "skill": "PostgreSQL",
         "level": 1
+    },
+    {
+        "skill": "Express",
+        "level": 1
+    },
+    {
+        "skill": "MongoDB",
+        "level": 1
+    },
+    {
+        "skill": "Sass",
+        "level": 3
+    },
+    {
+        "skill": "Python",
+        "level": 3
+    },
+    {
+        "skill": "JavaScript",
+        "level": 3
+    },
+    {
+        "skill": "SQL",
+        "level": 2
     }
 ]

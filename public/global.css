@@ -2,7 +2,7 @@
     --font-size-h1: clamp(1.5rem, 6vw, 3.052rem);
     --font-size-h2: clamp(2.441rem, 9vh, 7.451rem);
     --font-size-h3: clamp(1.953rem, 4vw, 3.052rem);
-    --font-size-h4: clamp(1.953rem, 3vw, 2.441rem);
+    --font-size-h4: clamp(1.25rem, 2.5vw, 1.953rem);
     --font-size-p: clamp(.9rem, 2vw ,1.25rem);
 
     --color-white: #fff;
@@ -14,8 +14,6 @@
     --color-white-trans75: hsla(0, 0%, 100%, 0.75);
     --color-white-trans90: hsla(0, 0%, 100%, 0.9);
 
-
-
     /* Greys  */
     --color-grey-dark: #2D2A2E;
     --color-grey-light: #403e41;
@@ -24,7 +22,7 @@
     --color-primary-trans50: rgba(120, 221, 232, 0.50);
     --color-accent: #ff6188;
 
-    --box-shadow-light: 1px 1px 2px var(--color-black-trans75);
+    --box-shadow-light: 0px 1px 2px var(--color-black);
     --box-shadow-primary: 3px 3px 0px var(--color-primary);
 }
 

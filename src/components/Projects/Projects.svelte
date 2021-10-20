@@ -10,10 +10,7 @@
     export let toggleNavButtonVisibility;
     export let toggleNavVisibility;
 
-    let outroEnded = false;
-
     const handleOutroReset = () => {
-        outroEnded = false;
         toggleNavButtonVisibility();
         toggleNavVisibility();
     }
@@ -35,7 +32,7 @@
         {handleOutroEnd}  
         sectionTitle="Projects" 
     >
-        <ProjectList {handleProjectClick} bind:outroEnded />
+        <ProjectList {handleProjectClick} />
         <ProjectModal bind:clickedProject {handleOutroReset} />
     </Section>
 {/if}

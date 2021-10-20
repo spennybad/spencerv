@@ -1,0 +1,23 @@
+[
+    {
+        "company": "Bell",
+        "jobTitle": "Business Intelligence/Big Data Engineer",
+        "jobDesc": "Working for Bell I was given ample oppertunity to grow as a developer and take on massive responsibility.",
+        "logo": "",
+        "dateRange": "May 2020 - Sept 2021"
+    },
+    {
+        "company": "Beta Lab",
+        "jobTitle": "Android Developer",
+        "jobDesc": "While developing for Beta Lab I gained experience working on complex applications in a team oriented environment. I also gained experience with continuous integration while completing both the front and back end of applications.",
+        "logo": "",
+        "dateRange": "Sept 2018 - April 2020"
+    },
+    {
+        "company": "Kumon",
+        "jobTitle": "Math/Reading Tutor",
+        "jobDesc": "From the ages of 13 to 17 I worked for Kumon as a Math and English tutor. In this position I learnt patience and largely improved my communication skills. The students I helped ranged from grades one to twelve.",
+        "logo": "",
+        "dateRange": "Jan 2013 - Sept 2017"
+    }
+]

@@ -5,7 +5,6 @@
     import { onMount } from 'svelte';
 
     export let handleProjectClick;
-    export let outroEnded;
 
     let mounted = false;
     
@@ -35,10 +34,6 @@
         mounted = true;
     })
 
-    const handleOutroEnded = () => {
-        outroEnded = true;
-    }
-
 </script>
 
 <ul bind:clientWidth={projectListW}
@@ -65,7 +60,6 @@
         display: grid;
         grid-auto-rows: max-content;
         list-style: none;
-        border: 2px solid blueviolet;
     }
 
 </style>

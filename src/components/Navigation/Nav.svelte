@@ -46,13 +46,14 @@
         width: 100%;
         background-color: var(--color-black-trans90);
         display: grid;
-        place-items: center;
+        justify-items: end;
+        align-items: center;
         z-index: 1;
     }
 
     nav ul {
         list-style: none;
-        text-align: center;
+        text-align: end;
     }
 
 

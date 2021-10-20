@@ -1,0 +1,19 @@
+[
+
+    {
+        "title": "Advanced CSS and Sass",
+        "desc": "Course for mastering CSS3 including a deep dive into flex, grid and resposived design paradigms.",
+        "url": "https://www.udemy.com/course/advanced-css-and-sass/"
+    },
+    {
+        "title": "Node.js, Express, MongoDB",
+        "desc": "Learning Node",
+        "url": "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
+    },
+    {
+        "title": "Understanding TypeScript",
+        "desc": "An indepth look into TypeScript and its features.",
+        "url": "https://www.udemy.com/course/understanding-typescript/"
+    }
+
+]
