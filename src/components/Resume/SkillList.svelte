@@ -3,13 +3,15 @@
 
     export let skills;
     export let level;
+
+    console.log(skills);
 </script>
 
 <ul
 
 >
     {#each skills as skill}
-        <SkillTile tech={skill.skill} />
+        <SkillTile skill={skill} />
     {/each}
     <p>{level}</p>
 </ul>

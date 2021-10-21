@@ -14,7 +14,7 @@
     export let handleOutroEnd;
     
     export let h;
-
+    console.log(skillsData)
 </script>
 
 {#if !loading}
@@ -39,7 +39,7 @@
         gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
         padding: .5rem;
-        align-items: center;
+
     }
 
     @media only screen and (max-width: 1100px) {

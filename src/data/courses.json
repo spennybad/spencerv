@@ -2,12 +2,12 @@
 
     {
         "title": "Advanced CSS and Sass",
-        "desc": "Course for mastering CSS3 including a deep dive into flex, grid and resposived design paradigms.",
+        "desc": "Course for mastering CSS3, including a deep dive into flex, grid and responsive design paradigms.",
         "url": "https://www.udemy.com/course/advanced-css-and-sass/"
     },
     {
-        "title": "Node.js, Express, MongoDB",
-        "desc": "Learning Node",
+        "title": "NodeJS - The Complete Guide",
+        "desc": "Learnt Node JS & Deno.js, built REST APIs with Node.js, build GraphQL APIs, added Authentication, used MongoDB, SQL and much more.",
         "url": "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
     },
     {

@@ -1,9 +1,10 @@
 <script>
-    export let tech;
+    export let skill;
 </script>
 
 <li>
-    <p>{tech}</p>
+    <img src={skill.logoURL} alt={skill.skill} />
+    <p>{skill.skill}</p>
 </li>
 
 <style>
@@ -12,6 +13,20 @@
         background-color: var(--color-white);
         box-shadow: var(--box-shadow-primary);
         padding: .5rem;
+    
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        transition: all .1s;
+    }
+
+    li:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        height: 2rem;
     }
 
     p {

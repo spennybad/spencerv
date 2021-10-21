@@ -6,7 +6,7 @@
 
 <li>
     <div>
-        <span><h4>{experience.company}</h4><div class="divider" /><p>({experience.dateRange})</p></span>
+        <div><h4>{experience.company}</h4><p>({experience.dateRange})</p></div>
         <p>{experience.jobTitle}</p>
     </div>
     <p>{experience.jobDesc}</p>
@@ -24,6 +24,11 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        transition: all .2s;
+    }
+
+    li:hover {
+        transform: translateX(-.5rem);
     }
 
     h4 {
@@ -35,16 +40,15 @@
         color: var(--color-primary);
     }
 
-    div span p {
-        color: var(--color-white);
+    div div {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        flex-wrap: wrap;
     }
 
-    span {
-        display: flex;
-        width: max-content;
-        align-items: center;
-        gap: .2rem;
-        flex-wrap: wrap;
+    div div p {
+        color: var(--color-white);
     }
 
 

@@ -1,74 +1,87 @@
 [
     {
         "skill": "HTML5",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
     },
     {
         "skill": "CSS3",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/css3_awaqrw.svg"
     },
     {
         "skill": "React",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/react_wnd7im.svg"
     },
     {
         "skill": "Next JS",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/next-dot-js_daf9a5.svg"
     },
     {
         "skill": "Gatsby JS",
-        "level": 2
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/gatsby_ixk6rn.svg"
     },
     {
         "skill": "Svelte",
-        "level": 2
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/svelte_m0zuj1.svg"
     },
     {
         "skill": "Node JS",
-        "level": 2
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/node-dot-js_rvz8na.svg"
     },
     {
         "skill": "Unity",
-        "level": 1
+        "level": 1,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/unity_zmvrqu.svg"
     },
     {
         "skill": "Kafka",
-        "level": 2
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/apachekafka_w0kpqn.svg"
     },
     {
         "skill": "TypeScript",
-        "level": 2
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/typescript_ctp7ye.svg"
     },
     {
         "skill": "Chakra UI",
-        "level": 1
-    },
-    {
-        "skill": "PostgreSQL",
-        "level": 1
-    },
-    {
-        "skill": "Express",
-        "level": 1
+        "level": 1,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/c_scale,w_32/v1634843702/spencerv/SkillLogos/chakra_zw96hf.svg"
     },
     {
         "skill": "MongoDB",
-        "level": 1
+        "level": 1,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/mongodb_supv2j.svg"
     },
     {
         "skill": "Sass",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/sass_yzpvcg.svg"
     },
     {
         "skill": "Python",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/python_jj4zem.svg"
     },
     {
         "skill": "JavaScript",
-        "level": 3
+        "level": 3,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/javascript_wj42xx.svg"
     },
     {
-        "skill": "SQL",
-        "level": 2
+        "skill": "GraphQL",
+        "level": 1,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/graphql_eim7kk.svg"
+    },
+    {
+        "skill": "Deno JS",
+        "level": 1,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/c_scale,w_32/v1634843975/spencerv/SkillLogos/deno_plympo.svg"
     }
 ]

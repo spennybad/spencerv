@@ -27,6 +27,7 @@
         cursor: pointer;
         padding-bottom: 2rem;
         overflow: hidden;
+        transition: all .2s;
     }
 
     li:after {
@@ -41,6 +42,10 @@
         line-height: 1;
     }
 
+    li:hover {
+        transform: translateX(-.5rem);
+    }
+
     li:hover:after {
         color: var(--color-primary);
     }
@@ -51,7 +56,7 @@
     }
 
     p {
-        color: var(--color-white);
+        color: var(--color-primary);
     }
 
     a {

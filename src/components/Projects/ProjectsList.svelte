@@ -29,6 +29,8 @@
 
     $: projectXCount = getXCount(projectListW, gridBreakPoints);
 
+    $: console.log(projectListW);
+
     // Fixes content shift of projects being loaded.
     onMount(() => {
         mounted = true;
