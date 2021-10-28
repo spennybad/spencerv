@@ -93,8 +93,7 @@
         min-height: 100vh;
 
         background-color: var(--color-grey-dark);
-        overflow: hidden;
-
+        
         display: grid;
         grid-template-rows: auto 1fr;
     }

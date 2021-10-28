@@ -3,7 +3,7 @@
 </script>
 
 <li>
-    <img src={skill.logoURL} alt={skill.skill} />
+    {#if skill.logoURL } <img src={skill.logoURL} alt={skill.skill} /> {/if}
     <p>{skill.skill}</p>
 </li>
 

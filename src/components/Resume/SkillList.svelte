@@ -4,7 +4,6 @@
     export let skills;
     export let level;
 
-    console.log(skills);
 </script>
 
 <ul

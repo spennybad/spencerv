@@ -7,11 +7,34 @@
         "git": "https://github.com/Spencercv7/mannyhouston_web",
         "id": 1,
         "stackList": [
-                "Next JS",
-                "CSS",
-                "CMS (Contentful",
-                "React",
-                "Styled Components"
+            {
+                "skill": "Next JS",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/next-dot-js_daf9a5.svg"
+            },
+            {
+                "skill": "HTML5",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
+            },
+            {
+                "skill": "JavaScript",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/javascript_wj42xx.svg"
+            },
+            {
+                "skill": "CSS3",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/css3_awaqrw.svg"
+            },
+            {
+                "skill": "Contentful (CMS)",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1635454218/spencerv/SkillLogos/contentful_c1zt99.svg"
+            },
+            {
+                "skill": "React",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/react_wnd7im.svg"
+            },
+            {
+                "skill": "Styled Components",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1635453680/spencerv/SkillLogos/styled-components_gfo78b.svg"
+            }
         ]
     },
     {
@@ -21,11 +44,34 @@
         "git": "https://github.com/Spencercv7/mannyhouston_web",
         "id": 1,
         "stackList": [
-                "Next JS",
-                "CSS",
-                "CMS (Sanity)",
-                "React",
-                "Styled Components"
+            {
+                "skill": "Next JS",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/next-dot-js_daf9a5.svg"
+            },
+            {
+                "skill": "CSS3",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/css3_awaqrw.svg"
+            },
+            {
+                "skill": "HTML5",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
+            },
+            {
+                "skill": "Sanity (CMS)",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1635453991/spencerv/SkillLogos/sanity_lyxnl4.svg"
+            },
+            {
+                "skill": "React",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843489/spencerv/SkillLogos/react_wnd7im.svg"
+            },
+            {
+                "skill": "Styled Components",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1635453680/spencerv/SkillLogos/styled-components_gfo78b.svg"
+            },
+            {
+                "skill": "TypeScript",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/typescript_ctp7ye.svg"
+            }
         ]
     },
     {
@@ -36,10 +82,23 @@
         "git": "https://github.com/Spencercv7/epoch-converter",
         "id": 2,
         "stackList": [
-            "Svelte",
-            "CSS",
-            "HTML",
-            "Javascript"
+            {
+                "skill": "Svelte",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/svelte_m0zuj1.svg"
+            },
+            {
+                "skill": "CSS3",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/css3_awaqrw.svg"
+            },
+            {
+                "skill": "HTML5",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
+            },
+            {
+                "skill": "JavaScript",
+                "level": 3,
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/javascript_wj42xx.svg"
+            }
         ]
     },
     {
@@ -50,10 +109,23 @@
         "git": "https://github.com/Spencercv7/aim-trainer",
         "id": 3,
         "stackList": [
-            "Svelte",
-            "CSS",
-            "HTML",
-            "Javascript"
+            {
+                "skill": "Svelte",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/svelte_m0zuj1.svg"
+            },
+            {
+                "skill": "CSS3",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/css3_awaqrw.svg"
+            },
+            {
+                "skill": "HTML5",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
+            },
+            {
+                "skill": "JavaScript",
+                "level": 3,
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/javascript_wj42xx.svg"
+            }
         ]
     }
 ]

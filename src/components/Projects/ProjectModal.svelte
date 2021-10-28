@@ -45,8 +45,8 @@
             >
         </a>
         <ul id="skill_list">
-            {#each clickedProject.stackList as tech}
-                <SkillTile {tech}/>
+            {#each clickedProject.stackList as skill}
+                <SkillTile {skill}/>
             {/each}
         </ul>
         <p>{clickedProject.desc}</p>

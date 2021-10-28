@@ -13,10 +13,8 @@
 
 
 ## TODO:
-- Skills
-    - Skills will be added in the form of tiles in the project modals.
 - Reference letters.
 - Change About picture.
 - Comment code/clean code.
 - Look into changing H1 font. Current has lots of bleed.
-- Add more  details to about section. 
+- Fix: Broken modal on projects page.

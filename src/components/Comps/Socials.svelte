@@ -29,8 +29,6 @@
     ul {
         display: flex;
         flex-direction: column;
-        position: sticky;
-        top: 0;
     }
 
     li {

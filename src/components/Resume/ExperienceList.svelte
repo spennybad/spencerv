@@ -26,7 +26,6 @@
         flex-direction: column;
         gap: .5rem;
         list-style: none;
-        height: 100%;
     }
 
     @media only screen and (max-width: 1100px) {
