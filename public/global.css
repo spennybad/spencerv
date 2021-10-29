@@ -39,7 +39,16 @@
     box-sizing: border-box;
 
     /* border: 1px solid red; */
+
+    /* Styles scrollbar on firefox... not worried about safari scrollbar as most safari use is mobile. */
+    scrollbar-width: thin;
+    scrollbar-color: #888  var(--color-grey-dark);
     
+}
+
+html {
+    overflow-y: scroll;
+
 }
 
 html, body {
@@ -67,6 +76,7 @@ h1 {
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
+    transition: all .2s;
 }
 
 /* Track */

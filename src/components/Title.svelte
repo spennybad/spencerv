@@ -15,7 +15,7 @@
         Spencer Venable
     </h1>
 {:else}
-    <h1 in:fly={{ x: -w, duration: 200 }}>Spencer Venable</h1>
+    <h1 in:fly={{ x: -w, duration: 200, delay: 0 }}>Spencer Venable</h1>
 {/if}
 
 <style>
