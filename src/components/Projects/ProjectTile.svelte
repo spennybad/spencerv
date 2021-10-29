@@ -1,20 +1,13 @@
 <script>
 
     export let project;
-    export let projectListW;
 
-    export let projectXCount;
-    export let gridGap;
     export let handleProjectClick;
 
 </script>
 
 <li 
     on:click={() => handleProjectClick(project)}
-    style="
-        width: calc({projectListW/projectXCount}px - {gridGap}rem);
-        height: calc(0.6 * ({projectListW/projectXCount}px - {gridGap}rem));
-    "
 >  
     <img class="background_image" src={project.imagePath} alt="Project." />
 </li>

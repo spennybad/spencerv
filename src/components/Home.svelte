@@ -13,7 +13,10 @@
      <Section {h} {loading} {handleOutroEnd} sectionTitle="Home">
         <div id="home_wrapper">
             <div id="photo">
-                <img src="/images/channel-icon.jpeg" alt="French Boy"/>
+                <img 
+                    src="https://res.cloudinary.com/spencercv7-dev/image/upload/c_scale,w_1000/v1635521440/spencerv/IMG_1582_wpkzje.webp" 
+                    alt="Spencer Venable"
+                />
             </div>
             <div id="home_text">
                 <p><span>Hello!</span></p>

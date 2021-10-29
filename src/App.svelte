@@ -5,6 +5,7 @@
     import Title from "./components/Title.svelte";
     import Nav from "./components/Navigation/Nav.svelte";
     import NavToggleButton from "./components/Navigation/NavToggleButton.svelte";
+    import Socials from "./components/Comps/Socials.svelte";
 
     import Home from "./components/Home.svelte";
     import Projects from "./components/Projects/Projects.svelte";
@@ -19,7 +20,7 @@
     $: showNav = true;
 
     // 0 == Home, 1 == About Me, 2 == Projects
-    let currentSection = 1;
+    let currentSection = 2;
 
     $: initial = false;
 
@@ -63,7 +64,7 @@
 
 <main bind:clientWidth={w} bind:clientHeight={h}>
     <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
-    <header >
+    <header class="header">
         <Title {initial} {w} />
         {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav}/> {/if}
     </header>

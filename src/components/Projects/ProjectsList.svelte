@@ -29,8 +29,6 @@
 
     $: projectXCount = getXCount(projectListW, gridBreakPoints);
 
-    $: console.log(projectListW);
-
     // Fixes content shift of projects being loaded.
     onMount(() => {
         mounted = true;
@@ -46,7 +44,7 @@
 >
     {#if mounted}
         {#each projectsData.default as project}
-            <ProjectTile {project} {projectListW} {projectXCount} {gridGap} {handleProjectClick} />
+            <ProjectTile {project} {handleProjectClick} />
         {/each}
     {/if}
 </ul>

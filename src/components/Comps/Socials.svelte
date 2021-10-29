@@ -1,6 +1,4 @@
 <script>
-    import { fly } from 'svelte/transition';
-
     export let loading;
 </script>
 
@@ -27,6 +25,8 @@
 <style>
     
     ul {
+        position: sticky;
+        bottom: 0;
         display: flex;
         flex-direction: column;
     }

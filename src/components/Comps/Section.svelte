@@ -1,12 +1,13 @@
 <script>
     import { fly } from "svelte/transition";
+
     import Socials from "./Socials.svelte";
 
     // Props
     export let sectionTitle;
-    export let loading;  
     export let h;
     export let handleOutroEnd;
+    export let loading;
 
 </script>
 
@@ -14,7 +15,8 @@
     transition:fly="{{y: h, duration: 200}}"        
     on:outroend="{handleOutroEnd}"
 >   
-    <aside>      
+    <aside
+    >      
         <h2>{sectionTitle}</h2>
         <Socials {loading} />
     </aside>
@@ -32,15 +34,20 @@
         grid-template-columns: auto 1fr;
     }
 
+    h2 {
+        position: sticky;
+        top: 0;
+    }
+
     aside {
-        max-height: 95vh;
+        height: inherit;
         display: grid;
         grid-template-rows: auto 1fr;
         align-items: end;
         justify-items: center;
         margin-right: 1rem;
-        position: sticky;
         top: 0;
+        transition: all .2s;
     }
 
     @media only screen and (max-width: 400px) {
