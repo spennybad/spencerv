@@ -12,10 +12,8 @@
     let gridGap = 1;
 
     const gridBreakPoints = {
-        600: 1,
-        1000: 2,
-        1600: 3,
-        10000: 4
+        1000: 1,
+        10000: 2
     }
 
     const getXCount = (w, gridBreakPoints) => {

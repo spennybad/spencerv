@@ -1,15 +1,22 @@
 [
     {
         "company": "Bell",
-        "jobTitle": "Business Intelligence/Big Data Engineer",
-        "jobDesc": "Working for Bell I was given ample oppertunity to grow as a developer and take on massive responsibility.",
+        "jobTitle": "BI Developer/Big Data Engineer",
+        "jobDesc": "Throughout my 16 month internship on Bell’s business intelligence team I was given great responsibility. As the lead developer on multiple high visibility projects, I was given the chance to exercise my communication skills when interacting with internal and external teams. My position also required constant learning and the use of new technologies, which on multiple occasions, I taught my co-workers about through presentations or one on one meetings. My hard work at Bell earned me two awards for “execution excellence” and “innovation”.",
         "logo": "",
         "dateRange": "May 2020 - Sept 2021"
     },
     {
+        "company": "SpencerV Development",
+        "jobTitle": "Freelance Web Developer",
+        "jobDesc": "As a freelance web developer I have gained valuable experience in time and client management. Offering 100% original designs, tailored to the clients requirements, my sites are dynamic, optimized and accessible. My passion for web development motivates me to spend much of my freetime developing sites, learning new technologies, or working on projects for fun.",
+        "logo": "",
+        "dateRange": "Jan 2021 - Current"
+    },
+    {
         "company": "Beta Lab",
         "jobTitle": "Android Developer",
-        "jobDesc": "While developing for Beta Lab I gained experience working on complex applications in a team oriented environment. I also gained experience with continuous integration while completing both the front and back end of applications.",
+        "jobDesc": "My time at Beta Lab was my first development position. Through it I learnt many of the foundational skills which aid me today as well as seeding my passion for development. As a non-paid position, my motivation to complete the work assigned to me was completely fueled by a love for the work and furthering my skill set as a developer.",
         "logo": "",
         "dateRange": "Sept 2018 - April 2020"
     },
