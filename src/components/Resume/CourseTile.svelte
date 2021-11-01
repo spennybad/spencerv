@@ -5,7 +5,7 @@
 </script>
 
 <li>
-    <a href={course.url} target="_blank">
+    <a href={course.url} target="_blank" rel="noopener noreferrer">
         <div>
             <h4>{course.title}</h4>
             <img src="/images/udemy.svg" alt="temp" />

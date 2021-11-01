@@ -39,8 +39,8 @@
         <div id="project_modal_content">
             <div id="project_image_wrapper">
                 <div id="project_links">
-                    <a href={clickedProject.url}><p>See the Code</p><img src={"/images/github1.svg"} alt="github logo" /></a>
-                    <a href={clickedProject.url}><p>Visit the Site</p><img src={"/images/earth.svg"} alt="internet/earth symbol" /></a>
+                    <a href={clickedProject.git} target="_blank" rel="noopener noreferrer"><p>See the Code</p><img src={"/images/github1.svg"} alt="github logo" /></a>
+                    <a href={clickedProject.url} target="_blank" rel="noopener noreferrer"><p>Visit the Site</p><img src={"/images/earth.svg"} alt="internet/earth symbol" /></a>
                 </div>
                 <img
                     src={clickedProject.imagePath}
