@@ -10,7 +10,7 @@
 
 >
     {#each skills as skill}
-        <SkillTile skill={skill} />
+        <SkillTile isResume={true} skill={skill} />
     {/each}
     <p>{level}</p>
 </ul>

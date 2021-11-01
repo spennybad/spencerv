@@ -21,7 +21,8 @@
             <div id="home_text">
                 <p><span>Hello!</span></p>
                 <p>My name is Spencer and I am a web developer.</p>
-                <p>I love staying up to date with the most modern tech and sharing my love for web development with others.</p>
+                <p>I am a super passionate about what I do and spend my free time working on projects or learning new skills.
+                    If you would like to work together please send me an email!</p>
             </div>
         </div>
     </Section>

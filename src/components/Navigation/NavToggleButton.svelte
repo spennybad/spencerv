@@ -1,11 +1,17 @@
 <script>
     export let loading;
     export let handleNav;
+    export let w;
+
+    import { fly } from "svelte/transition";
 </script>
 
 
 {#if !loading}
-    <button on:click={() => handleNav()}>
+    <button 
+        transition:fly={{x: w, duration: 400}}
+        on:click={() => handleNav()}
+    >
         <div />
         <div />
         <div />

@@ -16,6 +16,8 @@
 
 </script>
 
+<svelte:window on:keydown={(event) => {if (clickedProject && event.code == "Escape") handleModalClose()}} />
+
 {#if clickedProject}
     <div 
         bind:clientWidth={w}
@@ -46,7 +48,7 @@
         </a>
         <ul id="skill_list">
             {#each clickedProject.stackList as skill}
-                <SkillTile {skill}/>
+                <SkillTile isResume={false} {skill}/>
             {/each}
         </ul>
         <p>{clickedProject.desc}</p>
@@ -105,26 +107,6 @@
         width: 90%;
         max-width: 40rem;
         overflow: hidden;
-    }
-
-    #image_hover:before {
-        content: "Click to Visit";
-        width: max-content;
-        height: max-content;
-        background-color: var(--color-black-trans90);
-        border: 1px solid var(--color-primary);
-        color: var(--color-primary);
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        transform: translateX(100%);
-        transition: all .2s;
-    }
-
-    #image_hover:hover:before {
-        transform: translateX(-1px);
     }
     
     #project_img {

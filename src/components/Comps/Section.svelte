@@ -12,7 +12,7 @@
 </script>
 
 <section 
-    transition:fly="{{y: h, duration: 200}}"        
+    transition:fly="{{y: h, duration: 200, delay: 200}}"        
     on:outroend="{handleOutroEnd}"
 >   
     <aside
@@ -34,11 +34,6 @@
         grid-template-columns: auto 1fr;
     }
 
-    h2 {
-        position: sticky;
-        top: 0;
-    }
-
     aside {
         height: inherit;
         display: grid;
@@ -57,6 +52,8 @@
     }
 
     h2 {
+        position: sticky;
+        top: 0;
         font-size: var(--font-size-h2);
         white-space: nowrap;
         writing-mode: vertical-rl; 

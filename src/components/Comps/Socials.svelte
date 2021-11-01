@@ -29,6 +29,7 @@
         bottom: 0;
         display: flex;
         flex-direction: column;
+        margin-top: 10rem;
     }
 
     li {

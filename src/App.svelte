@@ -66,7 +66,7 @@
     <Nav {w} loading={initial} bind:currentSection {handleOutroStart} {navPanel} {handleNav} />
     <header class="header">
         <Title {initial} {w} />
-        {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav}/> {/if}
+        {#if isNavButtonShown} <NavToggleButton loading={initial} {handleNav} {w}/> {/if}
     </header>
 
     {#if currentSection == 0 && outroComplete}

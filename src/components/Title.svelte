@@ -9,13 +9,13 @@
 {#if initial}
     <h1
         id="intro_title"
-        in:fly={{ x: -w, duration: 400 }}
+        in:fly={{ x: -w, duration: 400, delay: 100 }}
         out:fly={{ x: w, duration: 400 }}
     >
         Spencer Venable
     </h1>
 {:else}
-    <h1 in:fly={{ x: -w, duration: 200, delay: 0 }}>Spencer Venable</h1>
+    <h1 in:fly={{ x: -w, duration: 200, delay: 200 }}>Spencer Venable</h1>
 {/if}
 
 <style>

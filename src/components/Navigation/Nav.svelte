@@ -22,10 +22,13 @@
 
 </script>
 
+<svelte:window on:keydown={(event) => {if (navPanel && event.code == "Escape") setCurrentSection(currentSection)}} />
+
 {#if !loading}
     {#if navPanel}
         <nav 
             transition:fly="{{x: w, duration: 100}}"
+            on:click|self={() => setCurrentSection(currentSection)}
         >
             <ul>
                 {#each pages as page, index}
