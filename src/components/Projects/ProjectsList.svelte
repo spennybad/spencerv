@@ -58,6 +58,7 @@
         display: grid;
         grid-auto-rows: max-content;
         list-style: none;
+        padding: 0 .5rem .5rem 0rem;
     }
 
 </style>
