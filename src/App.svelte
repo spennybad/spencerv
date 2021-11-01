@@ -5,7 +5,6 @@
     import Title from "./components/Title.svelte";
     import Nav from "./components/Navigation/Nav.svelte";
     import NavToggleButton from "./components/Navigation/NavToggleButton.svelte";
-    import Socials from "./components/Comps/Socials.svelte";
 
     import Home from "./components/Home.svelte";
     import Projects from "./components/Projects/Projects.svelte";
@@ -20,7 +19,7 @@
     $: showNav = true;
 
     // 0 == Home, 1 == About Me, 2 == Projects
-    let currentSection = 2;
+    let currentSection = 0;
 
     $: initial = false;
 

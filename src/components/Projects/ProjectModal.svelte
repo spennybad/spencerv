@@ -35,23 +35,28 @@
                 alt={"Exit Icon."}
             >
         </button>
-        <a
-            href={clickedProject.url}
-            target="_blank"
-            id="image_hover"
-        >
-            <img
-                src={clickedProject.imagePath}
-                alt={clickedProject.desc}
-                id="project_img"
-            >
-        </a>
-        <ul id="skill_list">
-            {#each clickedProject.stackList as skill}
-                <SkillTile isResume={false} {skill}/>
-            {/each}
-        </ul>
-        <p>{clickedProject.desc}</p>
+
+        <div id="project_modal_content">
+            <div id="project_image_wrapper">
+                <div id="project_links">
+                    <a href={clickedProject.url}><p>See the Code</p><img src={"/images/github1.svg"} alt="github logo" /></a>
+                    <a href={clickedProject.url}><p>Visit the Site</p><img src={"/images/earth.svg"} alt="internet/earth symbol" /></a>
+                </div>
+                <img
+                    src={clickedProject.imagePath}
+                    alt={clickedProject.desc}
+                    id="project_image"
+                >
+            </div>
+            <div id="project_modal_text">
+                <p>{clickedProject.desc}</p>
+                <ul>
+                    {#each clickedProject.stackList as skill}
+                        <SkillTile isResume={false} {skill}/>
+                    {/each}
+                </ul>
+            </div>
+        </div>
     </div>
 {/if}
 
@@ -59,30 +64,20 @@
     #project_modal {
         height: 100%;
         width: 100%;
-        background-color: var(--color-black-trans90);
+        
         position: fixed;
-        box-shadow: var(--box-shadow-light);
         z-index: 101;
 
-        display: grid;
-        align-content: center;
-        justify-items: center;
-        grid-auto-rows: max-content;
-        gap: 3rem;
-    }
+        background-color: var(--color-black-trans90);
+        box-shadow: var(--box-shadow-light);
 
-    #skill_list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        list-style: none;
-        gap: 1rem;
+        display: grid;
+        place-items: center;
+
+        grid-template-rows: auto 1fr;
     }
 
     #exit_button {
-        position: absolute;
-        top: 0;
-        right: 0;
         margin: 1rem;
         border: none;
         background-color: transparent;
@@ -96,29 +91,120 @@
         cursor: pointer;
         filter: invert();
         transition: all .2s;
+        justify-self: end;
     }
 
     #exit_button:hover {
         transform: scale(0.90);
     }
 
-    #image_hover {
+    #project_modal_content {
+        display: grid;
         position: relative;
-        width: 90%;
-        max-width: 40rem;
+        padding-inline: 5vw;
+        gap: 1rem;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #project_image_wrapper {
+        position: relative;
         overflow: hidden;
     }
+
+    #project_links {
+        position: absolute;
+        bottom: 0;
+        
+        display: flex;
+        flex-direction: column;
+
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    #project_links a {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap:1rem;
+        padding: .5rem;
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow-primary);
+        transform: translateX(calc(-100% + 3rem));
+        transition: all .2s;
+        text-decoration: none;
+    }
+
+    #project_links a p {
+        font-size: var(--font-size-p);
+        color: var(--color-black);
+    }
+
     
-    #project_img {
-        height: auto;
+    #project_links a:hover {
+        transform: translateX(0rem);
+    }
+
+    #project_links a img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+
+    #project_image {
         width: 100%;
+        justify-self: end;
+        align-self: center;
         border: 2px solid var(--color-white);
     }
 
-    p {
-        font-size: var(--font-size-p);
-        color: var(--color-white);
-        text-align: center;
+    #project_modal_text {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
+
+    #project_modal_text ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #project_modal_text p {
+        color: var(--color-white);
+        background-color: var(--color-black-trans90);
+        
+        padding: 1rem;
+        font-size: var(--font-size-p);
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        
+        #project_modal_content {
+            grid-template-columns: 1fr;
+        }
+
+        #project_modal_text {
+            text-align: center;
+        }
+
+        #project_modal_text ul {
+            justify-content: center
+        }
+
+        #project_links a {
+            transform: translateX(calc(-100% + 2.5rem));
+        }
+
+        #project_links a img {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+    
 </style>
  
