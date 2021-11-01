@@ -37,7 +37,6 @@
 <ul bind:clientWidth={projectListW}
     style="
         grid-template-columns: repeat({projectXCount}, 1fr);
-        grid-gap: {gridGap}rem;
     "
 >
     {#if mounted}
@@ -56,6 +55,7 @@
         position: relative;
         
         display: grid;
+        gap: .5rem;
         grid-auto-rows: max-content;
         list-style: none;
         padding: 0 .5rem .5rem 0rem;
