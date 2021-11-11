@@ -5,7 +5,7 @@
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [Challenges](#challenges)
-- [Possible Improvments](#possible-improvments)
+- [Possible Improvements](#possible-improvements)
 
 ## Hello!
 This is my personal site. The project was completed to increase my online presence and give me a place to showcase my work, in a clean, custom, and easily updatable way.
@@ -21,7 +21,7 @@ To run it locally, clone the repository, run "npm install" within the cloned dir
 ## Challenges
 The site has quite a unique and challenging design to implement well on all displays. However, by leveraging Svelte's amazing animation API and some clever CSS I am very happy with the end result.
 
-## Possible Improvments
+## Possible Improvements
 - Connect to CMS for easier content management.
 - Though the site is semantic, some HTML tags could be more use specific.
 - Safari has issue with Svelte's animation API in certain cases, resolving said would remove some content shifting issues.
