@@ -35,7 +35,6 @@
     }
 
     aside {
-        height: inherit;
         display: grid;
         grid-template-rows: auto 1fr;
         align-items: end;

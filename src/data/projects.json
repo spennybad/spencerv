@@ -2,7 +2,7 @@
     
     {
         "url": "https://www.mannyhouston.com/",
-        "desc": "Art portfolio and blog for rapper/actor Manny Houston.",
+        "desc": "A freelance project completed for Musician and Actor Manny Houston. The site includes a blog managed by CMS and a video page which leverages the YouTube Data API. Figma was used to create the site's design, and Framer Motion was used to add animations.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/mannyhouston_hk4rlp.webp",
         "git": "https://github.com/Spencercv7/mannyhouston_web",
         "id": 1,
@@ -39,7 +39,7 @@
     },
     {
         "url": "https://www.venablepark.com/",
-        "desc": "Website for Venable Park Investment Counsel Inc.",
+        "desc": "A freelance project completed for Venable Park Investment Council. The site is currently in its first iteration (see ReadMe on GitHub for more information). Dynamic content on the site includes testimonials, a newsletter archive and all data present on the “Team” page.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634344498/spencerv/VenablePark_myfsz3.webp",
         "git": "https://github.com/Spencercv7/mannyhouston_web",
         "id": 1,
@@ -76,7 +76,7 @@
     },
     {
         "url": "https://epoch-converter.vercel.app/",
-        "desc": "Unix timestamp converter application.",
+        "desc": "During my time working at Bell as a Data Engineer, it was common to convert between Epoch and standard date format. To streamline this process I created my own tool to go between these timestamp formats. The project was completed in 24 hours.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/epochconverter_xz9sqc.webp",
         "priority": false,
         "git": "https://github.com/Spencercv7/epoch-converter",
@@ -102,7 +102,7 @@
     },
     {
         "url": "https://aim-trainer.vercel.app/",
-        "desc": "Aim traning application for mouse accuracy.",
+        "desc": "This aim trainer was a 24 hour challenge I gave myself to test my knowledge of Svelte. The game has two game modes, and reports overall accuracy post game via a ‘heat-map’. See GitHub ReadMe for more information. ",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/aimtrainner_p9fdvf.webp",
         "priority": false,
         "git": "https://github.com/Spencercv7/aim-trainer",

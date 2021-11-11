@@ -110,6 +110,7 @@
     #project_image_wrapper {
         position: relative;
         overflow: hidden;
+        height: max-content;
     }
 
     #project_links {
@@ -125,7 +126,9 @@
 
     #project_links a {
         display: flex;
-        justify-content: end;
+        
+        justify-content: flex-end;
+
         align-items: center;
         gap:1rem;
         padding: .5rem;
@@ -182,7 +185,7 @@
         width: 100%;
     }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1000px) {
         
         #project_modal_content {
             grid-template-columns: 1fr;
@@ -198,6 +201,10 @@
 
         #project_links a {
             transform: translateX(calc(-100% + 2.5rem));
+        }
+
+        #project_image {
+            height: 70%;
         }
 
         #project_links a img {

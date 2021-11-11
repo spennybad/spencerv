@@ -1,9 +1,16 @@
 <script>
     export let loading;
+    import { fly } from "svelte/transition";
+
+    let w;
 </script>
 
 {#if !loading}
-    <ul>
+    <ul 
+        bind:clientWidth={w} 
+        in:fly={{x: -w, delay: 500, duration: 100}}
+        out:fly={{x: -w, delay: 0, duration: 100}}
+    >
         <li>
             <a href="https://www.linkedin.com/in/spencer-venable-31494a187">
                 <img class="centeredInContainer" src="/images/linkedin.svg" alt="LinkedIn">
