@@ -41,7 +41,7 @@
         "url": "https://www.venablepark.com/",
         "desc": "A freelance project completed for Venable Park Investment Council. The site is currently in its first iteration (see ReadMe on GitHub for more information). Dynamic content on the site includes testimonials, a newsletter archive and all data present on the “Team” page.",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634344498/spencerv/VenablePark_myfsz3.webp",
-        "git": "https://github.com/Spencercv7/mannyhouston_web",
+        "git": "https://github.com/Spencercv7/venableparkweb",
         "id": 1,
         "stackList": [
             {
