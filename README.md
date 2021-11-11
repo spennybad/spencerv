@@ -12,7 +12,6 @@ This is my personal site. The project was completed to increase my online presen
 
 ## Tech Stack
 - [Svelte](https://svelte.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 Click [here](https://www.spencerv.dev/) to visit the site!
