@@ -9,7 +9,6 @@
     let mounted = false;
     
     let projectListW;
-    let gridGap = 1;
 
     const gridBreakPoints = {
         1000: 1,

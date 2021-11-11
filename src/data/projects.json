@@ -95,9 +95,8 @@
                 "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843487/spencerv/SkillLogos/html5_w2v0iz.svg"
             },
             {
-                "skill": "JavaScript",
-                "level": 3,
-                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843488/spencerv/SkillLogos/javascript_wj42xx.svg"
+                "skill": "TypeScript",
+                "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1634843490/spencerv/SkillLogos/typescript_ctp7ye.svg"
             }
         ]
     },
