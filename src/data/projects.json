@@ -102,7 +102,7 @@
     },
     {
         "url": "https://aim-trainer.vercel.app/",
-        "desc": "This aim trainer was a 24 hour challenge I gave myself to test my knowledge of Svelte. The game has two game modes, and reports overall accuracy post game via a ‘heat-map’. See GitHub ReadMe for more information. ",
+        "desc": "This aim trainer was a 5 day challenge I gave myself to test my knowledge of Svelte. The game has two game modes, and reports overall accuracy post game via a ‘heat-map’. See GitHub ReadMe for more information. ",
         "imagePath": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1626458729/aimtrainner_p9fdvf.webp",
         "priority": false,
         "git": "https://github.com/Spencercv7/aim-trainer",
