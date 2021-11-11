@@ -23,7 +23,6 @@
                 <p>My name is Spencer and I am a web developer.</p>
                 <p>I am super passionate about what I do and spend my free time working on projects or learning new skills.</p>
                 <p>If you would like to work together please send me an email!</p>
-                <p style="font-size: calc(var(--font-size-p) + 1rem);">🔥</p>
             </div>
         </div>
     </Section>
