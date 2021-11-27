@@ -83,5 +83,10 @@
         "skill": "Deno JS",
         "level": 1,
         "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/c_scale,w_32/v1634843975/spencerv/SkillLogos/deno_plympo.svg"
+    },
+    {
+        "skill": "Express JS",
+        "level": 2,
+        "logoURL": "https://res.cloudinary.com/spencercv7-dev/image/upload/v1637993145/spencerv/SkillLogos/expressjs-icon_dc0spm.svg"
     }
 ]
